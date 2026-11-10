@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="104 rébus visuels sur le droit, la procédure et la justice. Devinez l'expression cachée et battez votre record.">
+<meta name="theme-color" content="#8C1D2E">
+<meta property="og:title" content="Dingbats du prétoire">
+<meta property="og:description" content="104 rébus juridiques : devinez l'expression cachée.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%2211%22%20fill%3D%22%238C1D2E%22/%3E%3Crect%20x%3D%2222.5%22%20y%3D%2212%22%20width%3D%223%22%20height%3D%2224%22%20fill%3D%22%23ffffff%22/%3E%3Crect%20x%3D%2215%22%20y%3D%2235%22%20width%3D%2218%22%20height%3D%223.5%22%20rx%3D%221.5%22%20fill%3D%22%23ffffff%22/%3E%3Crect%20x%3D%229%22%20y%3D%2213.5%22%20width%3D%2230%22%20height%3D%223%22%20rx%3D%221.5%22%20fill%3D%22%23ffffff%22/%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2212%22%20r%3D%223.2%22%20fill%3D%22%23ffffff%22/%3E%3Cpath%20d%3D%22M12%2016%20L8%2026%20M12%2016%20L16%2026%20M36%2016%20L32%2026%20M36%2016%20L40%2026%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.4%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M6.5%2026%20H17.5%20Q17.5%2031.5%2012%2031.5%20Q6.5%2031.5%206.5%2026Z%20M30.5%2026%20H41.5%20Q41.5%2031.5%2036%2031.5%20Q30.5%2031.5%2030.5%2026Z%22%20fill%3D%22%23ffffff%22/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%2211%22%20fill%3D%22%238C1D2E%22/%3E%3Crect%20x%3D%2222.5%22%20y%3D%2212%22%20width%3D%223%22%20height%3D%2224%22%20fill%3D%22%23ffffff%22/%3E%3Crect%20x%3D%2215%22%20y%3D%2235%22%20width%3D%2218%22%20height%3D%223.5%22%20rx%3D%221.5%22%20fill%3D%22%23ffffff%22/%3E%3Crect%20x%3D%229%22%20y%3D%2213.5%22%20width%3D%2230%22%20height%3D%223%22%20rx%3D%221.5%22%20fill%3D%22%23ffffff%22/%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2212%22%20r%3D%223.2%22%20fill%3D%22%23ffffff%22/%3E%3Cpath%20d%3D%22M12%2016%20L8%2026%20M12%2016%20L16%2026%20M36%2016%20L32%2026%20M36%2016%20L40%2026%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.4%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M6.5%2026%20H17.5%20Q17.5%2031.5%2012%2031.5%20Q6.5%2031.5%206.5%2026Z%20M30.5%2026%20H41.5%20Q41.5%2031.5%2036%2031.5%20Q30.5%2031.5%2030.5%2026Z%22%20fill%3D%22%23ffffff%22/%3E%3C/svg%3E">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px/1.5 system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Dingbats du prétoire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: ruled legal-pad header with double margin rule, sticky filter bar, square puzzle tiles in a grid; quiz overlay for workshops. Duotone = ink + bordeaux. */
+:root{
+  --bg:#E6E7EC; --surface:#F4F4F7; --tile:#FCFCFD; --ink:#17151F; --ink-2:#4D4A5B; --mute:#9B98A7; --line:#D2D1DA;
+  --acc:#8C1D2E; --acc-soft:#F2DCE0; --shade:#C8C5D0;
+  --ok:#1E8F4E; --bad:#D1352B; --ice:#D6ECF5; --ice-hi:rgba(255,255,255,.65); --ice-edge:#A9D1E2; --ice-ink:#24607B;
+  --water:#7FB4D8; --water-ink:#2B78B5; --wood:#C08A55; --wood-ink:#3A2410; --wine:#8E2A45;
+  --f-puz:"Archivo","Arial Narrow",system-ui,sans-serif;
+  --f-ui:"Instrument Sans",system-ui,-apple-system,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121118; --surface:#19181F; --tile:#201E28; --ink:#EFEEF4; --ink-2:#B1AEBD; --mute:#726F80; --line:#2E2C38;
+  --acc:#F08D9C; --acc-soft:#4A2029; --shade:#423F4D;
+  --ok:#4FCB86; --bad:#FF6A5F; --ice:#1D3B49; --ice-hi:rgba(255,255,255,.08); --ice-edge:#2E5A6C; --ice-ink:#A6DBF0;
+  --water:#2C5F86; --water-ink:#7FC0F2; --wood:#7A5432; --wood-ink:#F6E3CC; --wine:#C9587A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121118; --surface:#19181F; --tile:#201E28; --ink:#EFEEF4; --ink-2:#B1AEBD; --mute:#726F80; --line:#2E2C38;
+  --acc:#F08D9C; --acc-soft:#4A2029; --shade:#423F4D;
+  --ok:#4FCB86; --bad:#FF6A5F; --ice:#1D3B49; --ice-hi:rgba(255,255,255,.08); --ice-edge:#2E5A6C; --ice-ink:#A6DBF0;
+  --water:#2C5F86; --water-ink:#7FC0F2; --wood:#7A5432; --wood-ink:#F6E3CC; --wine:#C9587A; color-scheme:dark}
+
+body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+
+/* Header on planning paper */
+.hd{border-bottom:1px solid var(--line);
+  background:
+   linear-gradient(90deg,transparent 0 6px,var(--acc) 6px 7px,transparent 7px 10px,var(--acc) 10px 11px,transparent 11px),
+   repeating-linear-gradient(180deg,transparent 0 27px,var(--line) 27px 28px),
+   var(--surface)}
+.hd .wrap{padding-block:40px 30px;display:grid;gap:14px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.logo{flex:none;width:44px;height:44px;display:block}
+.eyebrow{margin:0;font:500 12px/1.3 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+h1{margin:0;font:900 clamp(40px,8vw,84px)/.92 var(--f-puz);font-stretch:118%;letter-spacing:-.02em;text-wrap:balance}
+h1 .flip{display:inline-block;transform:scaleX(-1);color:var(--acc)}
+.lede{margin:0;max-width:60ch;color:var(--ink-2);font-size:16px}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-block:10px 4px}
+.btn-hero{display:inline-flex;align-items:center;gap:16px;border:2px solid var(--ink);background:var(--acc);color:var(--tile);border-radius:14px;padding:16px 28px 16px 20px;font:800 clamp(22px,3.4vw,30px)/1.05 var(--f-puz);font-stretch:110%;box-shadow:6px 6px 0 var(--ink);transition:transform .12s,box-shadow .12s;text-align:left;max-width:100%}
+.btn-hero:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--ink)}
+.btn-hero:active{transform:translate(4px,4px);box-shadow:2px 2px 0 var(--ink)}
+.btn-hero .lbl{display:flex;flex-direction:column;gap:6px}
+.btn-hero small{font:500 13px/1.2 var(--f-mono);letter-spacing:.02em;opacity:.85}
+.play{flex:none;width:46px;height:46px;border-radius:50%;background:var(--tile);position:relative}
+.play::after{content:"";position:absolute;left:18px;top:13px;border-left:16px solid var(--acc);border-block:10px solid transparent}
+.btn-ghost{border:0;background:none;padding:8px 2px;font-size:16px;font-weight:600;color:var(--ink);text-decoration:underline;text-decoration-color:var(--acc);text-decoration-thickness:2px;text-underline-offset:5px}
+.btn-ghost:hover{color:var(--acc)}
+@media (prefers-reduced-motion:reduce){.btn-hero{transition:none}}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0;font:500 12px/1.4 var(--f-mono);color:var(--ink-2)}
+.legend b{color:var(--acc);font-weight:600;letter-spacing:.1em}
+
+/* Filter bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar .wrap{padding-block:12px;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;min-width:0;max-width:100%}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;font-size:13.5px;font-weight:500;white-space:nowrap}
+.chip small{font-family:var(--f-mono);color:var(--mute);margin-left:4px;font-size:11px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip[aria-pressed="true"] small{color:inherit;opacity:.7}
+.seg{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.seg button{border:0;background:var(--surface);padding:6px 11px;font-size:13px;font-weight:500}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--acc);color:var(--tile)}
+.actions{display:flex;gap:8px;margin-left:auto;flex-wrap:wrap}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:7px 12px;font-size:13.5px;font-weight:500}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:var(--tile);font-weight:600}
+.btn:hover{border-color:var(--ink-2)}
+.btn.primary:hover{filter:brightness(1.08)}
+
+/* Grid */
+main .wrap{padding-block:22px 60px}
+.count{margin:0 0 14px;font:500 12px var(--f-mono);color:var(--ink-2);letter-spacing:.04em}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(176px,1fr));gap:14px}
+@media (max-width:420px){.grid{grid-template-columns:1fr 1fr;gap:10px}}
+.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;min-width:0}
+.tilebtn{display:block;border:0;padding:0;background:none;width:100%}
+.tilebtn .t{border-bottom:1px solid var(--line)}
+.meta{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px 0;font:500 11px/1 var(--f-mono);color:var(--mute)}
+.meta .lv{color:var(--acc);letter-spacing:.12em}
+.ans{margin:0;padding:6px 10px 11px;min-height:3.1em;font-size:13.5px;line-height:1.3;font-weight:600;color:var(--ink)}
+.ans.hid{color:var(--mute);font-weight:500;font-style:italic}
+.ans small{display:block;font-weight:400;color:var(--ink-2);font-size:12px;margin-top:3px}
+
+/* ---------- Puzzle tile primitives ---------- */
+.t{position:relative;aspect-ratio:1;width:100%;container-type:inline-size;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2cqw;overflow:hidden;background:var(--tile)}
+.w{display:inline-block;font-family:var(--f-puz);font-weight:800;line-height:.92;white-space:nowrap;color:var(--ink);font-size:13cqw}
+.a{color:var(--acc)} .m{color:var(--mute)}
+.row{display:flex;align-items:center;justify-content:center;gap:2.5cqw}
+.tight{gap:0}
+.col{display:flex;flex-direction:column;align-items:center;gap:2cqw}
+.sv{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.inl{display:block;overflow:visible}
+.k{fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ka{stroke:var(--acc)} .dash{stroke-dasharray:3 4}
+.fs{fill:var(--acc-soft)} .fa{fill:var(--acc)} .fw{fill:var(--water);opacity:.82}
+.frame{border:1.6cqw solid var(--acc);padding:5cqw 6cqw}
+.gbar{position:absolute;height:11%;background:var(--acc-soft);border-left:1.2cqw solid var(--acc);display:flex;align-items:center;padding-left:2.5cqw;border-radius:0 1cqw 1cqw 0}
+.fadeout{-webkit-mask-image:linear-gradient(90deg,#000 50%,transparent 90%);mask-image:linear-gradient(90deg,#000 50%,transparent 90%)}
+.hr{position:absolute;left:12%;right:12%;height:.8cqw;background:var(--acc)}
+.pill{font:600 4.4cqw/1 var(--f-mono);color:var(--acc);border:.6cqw solid var(--acc);border-radius:99px;padding:1.4cqw 3cqw;letter-spacing:.05em}
+.box{display:inline-flex;align-items:center;justify-content:center;border:1.2cqw solid var(--acc);border-radius:1cqw}
+.speed{display:flex;flex-direction:column;gap:2cqw;align-items:flex-end}
+.speed i{display:block;height:1.1cqw;width:12cqw;background:var(--acc);border-radius:1cqw}
+.speed i:nth-child(2){width:18cqw}.speed i:nth-child(3){width:8cqw}
+.road{display:block;width:78cqw;height:10cqw;background:repeating-linear-gradient(90deg,var(--acc) 0 6cqw,transparent 6cqw 11cqw) center/100% 1cqw no-repeat,var(--ink)}
+.tomb{display:flex;flex-direction:column;align-items:center;gap:2.5cqw;border:1.2cqw solid var(--ink);border-radius:30cqw 30cqw 1cqw 1cqw;padding:10cqw 8cqw 9cqw}
+.arch{width:64cqw;height:48cqw;border:2.4cqw solid var(--ink);border-bottom:0;border-radius:32cqw 32cqw 0 0;display:flex;align-items:flex-end;justify-content:center;padding-bottom:5cqw;background:var(--acc-soft)}
+.fence{padding:4.5cqw;background:repeating-linear-gradient(90deg,var(--acc) 0 1.6cqw,transparent 1.6cqw 3.4cqw)}
+.fence>div{background:var(--tile);padding:5cqw}
+.ul{display:block;width:44cqw;height:.9cqw;background:var(--acc);border-radius:1cqw}
+.wallet{position:relative;border:1.4cqw solid var(--acc);border-radius:5cqw;padding:5cqw 17cqw 5cqw 8cqw;background:var(--acc-soft)}
+.wallet::after{content:"";position:absolute;right:-1.4cqw;top:50%;transform:translateY(-50%);width:13cqw;height:15cqw;border:1.4cqw solid var(--acc);border-radius:4cqw 0 0 4cqw;background:var(--tile)}
+.wallet .col{gap:1.6cqw}
+.case{position:relative;border:1.4cqw solid var(--ink);border-radius:3cqw;padding:7cqw 6cqw;background:var(--acc-soft);margin-top:6cqw}
+.handle{position:absolute;top:-8.4cqw;left:50%;transform:translateX(-50%);width:20cqw;height:7cqw;border:1.4cqw solid var(--ink);border-bottom:0;border-radius:3cqw 3cqw 0 0}
+.ice{background:var(--ice);border-radius:4cqw;padding:10cqw 7cqw;box-shadow:inset 2cqw 2cqw 0 var(--ice-hi),inset -1cqw -1cqw 0 var(--ice-edge)}
+.ice .w{color:var(--ice-ink)}
+.pipe{position:relative;width:74cqw;height:20cqw;border-block:1.4cqw solid var(--ink);background:var(--acc-soft);display:flex;align-items:center;justify-content:center}
+.pipe::before,.pipe::after{content:"";position:absolute;top:-5.4cqw;width:3.4cqw;height:28cqw;background:var(--ink);border-radius:.6cqw}
+.pipe::before{left:-3.4cqw}.pipe::after{right:-3.4cqw}
+.sheet{position:relative;width:54cqw;height:68cqw;border:1cqw solid var(--ink);display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(transparent 0 7cqw,var(--line) 7cqw 7.5cqw)}
+.sheet::after{content:"";position:absolute;top:-1cqw;right:-1cqw;width:13cqw;height:13cqw;background:linear-gradient(225deg,var(--tile) 50%,var(--acc) 50%)}
+.sheet .w,.hatch .w,.plate{background:var(--tile);padding:1cqw 2cqw}
+.ghost1{color:var(--acc-soft)!important}
+.edge{position:absolute;right:0;top:0;bottom:0;width:2cqw;background:var(--acc)}
+.gap{display:block;width:26cqw;height:6cqw;border-inline:1cqw solid var(--acc);background:linear-gradient(var(--acc),var(--acc)) center/100% .8cqw no-repeat}
+.rail{display:block;width:60cqw;height:4cqw;border-top:1cqw solid var(--ink);background:repeating-linear-gradient(90deg,var(--mute) 0 1.4cqw,transparent 1.4cqw 6cqw)}
+.hatch{padding:9cqw 8cqw;border:1cqw dashed var(--acc);background:repeating-linear-gradient(45deg,var(--acc-soft) 0 2cqw,transparent 2cqw 4cqw)}
+.vert{writing-mode:vertical-rl;text-orientation:upright;letter-spacing:-.08em}
+.silo{display:flex;align-items:center;justify-content:center;width:17cqw;height:64cqw;border:1cqw solid var(--ink);border-radius:9cqw 9cqw 1cqw 1cqw;background:var(--acc-soft)}
+.colm{display:block;width:13cqw;height:70cqw;border:.8cqw solid var(--mute);border-radius:1cqw}
+.spirit{display:flex;flex-direction:column;align-items:center;gap:3cqw;padding:10cqw 8cqw 13cqw;background:var(--acc-soft);border-radius:32cqw 32cqw 0 0;clip-path:polygon(0 0,100% 0,100% 100%,83% 91%,67% 100%,50% 91%,33% 100%,17% 91%,0 100%)}
+.eyes{font:900 5cqw/1 var(--f-puz);color:var(--ink);letter-spacing:.4em;margin-right:-.4em}
+.table{position:absolute;left:50%;top:50%;width:34cqw;height:34cqw;transform:translate(-50%,-50%);border-radius:50%;background:var(--acc-soft);border:1cqw solid var(--acc)}
+.cells{display:grid;grid-template-columns:repeat(3,22cqw);grid-template-rows:repeat(3,22cqw);border-top:.8cqw solid var(--ink);border-left:.8cqw solid var(--ink)}
+.cells span{border-right:.8cqw solid var(--ink);border-bottom:.8cqw solid var(--ink);display:flex;align-items:center;justify-content:center}
+.cells span:nth-child(5){background:var(--acc-soft)}
+.narrow{width:30cqw;padding:6cqw 0;border-inline:1.4cqw solid var(--ink);display:flex;justify-content:center}
+.plank{display:flex;justify-content:center;width:74cqw;padding:2.5cqw 0;background:var(--wood);border-radius:1cqw}
+.onwood{color:var(--wood-ink)!important}
+.basket{display:block;width:20cqw;height:11cqw;border:1.1cqw solid var(--acc);border-top:0;border-radius:0 0 9cqw 9cqw}
+.weight{display:flex;align-items:center;justify-content:center;width:40cqw;height:18cqw;background:var(--ink);color:var(--tile);font:800 7cqw/1 var(--f-puz);clip-path:polygon(18% 0,82% 0,100% 100%,0 100%)}
+.arrow{position:relative;display:block;width:34cqw;height:1.6cqw;background:var(--ink);margin-right:5cqw}
+.arrow::after{content:"";position:absolute;right:-4.5cqw;top:50%;transform:translateY(-50%);border-left:5cqw solid var(--ink);border-block:3.2cqw solid transparent}
+.water{color:var(--water-ink)!important}
+.snow{display:flex;align-items:center;justify-content:center;aspect-ratio:1;border-radius:50%;border:1cqw solid var(--acc);background:var(--acc-soft)}
+.hay{display:grid;grid-template-columns:repeat(4,auto);gap:2.5cqw 4cqw;align-items:center;justify-items:center}
+.mono{font-family:var(--f-mono)!important;font-weight:500!important}
+
+
+/* ---------- Illustrated scenes ---------- */
+.scene{position:absolute;inset:0;width:100%;height:100%;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;overflow:hidden}
+.xi{fill:var(--ink)}.xa{fill:var(--acc)}.xs{fill:var(--acc-soft)}.xt{fill:var(--tile)}.xh{fill:var(--shade)}.xl{fill:var(--line)}.xm{fill:var(--mute)}
+.xw{fill:var(--water)}.xd{fill:var(--wood)}.xdi{fill:var(--wood-ink)}.xc{fill:var(--ice)}.xci{fill:var(--ice-ink)}.xg{fill:var(--ok)}.xr{fill:var(--bad)}.xv{fill:var(--wine)}.n{fill:none}
+.si{stroke:var(--ink)}.sa{stroke:var(--acc)}.st{stroke:var(--tile)}.sx{stroke:var(--shade)}.sm{stroke:var(--mute)}.sd{stroke:var(--wood)}.sdi{stroke:var(--wood-ink)}.se{stroke:var(--ice-edge)}.sg{stroke:var(--ok)}.sr{stroke:var(--bad)}
+.T{font-family:var(--f-puz);font-weight:800;text-anchor:middle;dominant-baseline:central;stroke:none}
+
+
+/* ---------- Home ---------- */
+.hd .wrap{padding-block:32px 26px}
+.home .wrap{padding-block:18px 36px}
+.home-in{display:grid;gap:14px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:860px){.home-in{gap:18px}.quizp{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:28px;align-items:end}.quizp h2,.quizp .hint{grid-column:1/-1}.quizp .rec,.quizp .btn-hero{grid-column:1/-1}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:14px;align-content:start;min-width:0}
+.panel h2{margin:0;font:800 22px/1.1 var(--f-puz);font-stretch:108%;text-wrap:balance}
+.quizp{background:var(--acc-soft);border:2px solid var(--ink)}
+.hint{margin:0;color:var(--ink-2);max-width:52ch}
+.field{display:grid;gap:6px}
+.flabel{font:500 11px/1 var(--f-mono);letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2)}
+.seg.big{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;border-radius:10px;border-color:var(--ink)}
+.seg.big button{padding:12px 4px;font-size:15px;background:var(--tile)}
+.seg.big button+button{border-left-color:var(--ink)}
+.seg.big button[aria-pressed="true"]{background:var(--acc);color:var(--tile);font-weight:700}
+.quizp .btn-hero{width:100%;margin-top:4px}
+.phead{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.tlv{font:600 13px var(--f-mono);color:var(--acc);letter-spacing:.12em}
+.trytile{display:block;width:100%;max-width:340px;justify-self:center;padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:none}
+.tryans{margin:0;text-align:center;font:800 21px/1.2 var(--f-puz);min-height:2.6em;text-wrap:balance}
+.tryans.hid{font:500 14px/1.4 var(--f-mono);color:var(--mute)}
+.tryans small{display:block;font:400 14px/1.4 var(--f-ui);color:var(--ink-2);margin-top:4px}
+.tryctl{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.tryctl .btn{padding:10px 16px;font-size:15px}
+.tlist{display:grid;gap:10px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:620px){.tlist{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:980px){.tlist{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.tcard{display:flex;align-items:center;gap:12px;text-align:left;border:1px solid var(--line);background:var(--tile);border-radius:12px;padding:10px 12px 10px 10px;min-width:0}
+.tcard:hover{border-color:var(--acc)}
+.thumbs{display:flex;gap:4px;flex:none}
+.thumbs .t{width:50px;border:1px solid var(--line);border-radius:6px;pointer-events:none}
+.tname{display:grid;gap:2px;min-width:0}
+.tname b{font-weight:600;font-size:15px;line-height:1.25}
+.tname small{font:500 12px var(--f-mono);color:var(--ink-2)}
+.tcard .go{margin-left:auto;color:var(--acc);font-size:20px;flex:none}
+.steps{margin:0;padding:0;list-style:none;display:grid;gap:14px;counter-reset:s}
+@media (min-width:760px){.steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.steps li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 12px;counter-increment:s;align-items:start}
+.steps li::before{content:counter(s);grid-row:span 2;width:30px;height:30px;border-radius:50%;background:var(--acc);color:var(--tile);display:flex;align-items:center;justify-content:center;font:800 15px var(--f-puz)}
+.steps b{font-weight:600}
+.steps span{color:var(--ink-2);font-size:14px}
+.rec{margin:0;font:500 13px var(--f-mono);color:var(--ink-2)}
+.rec b{color:var(--acc);font-weight:600}
+.libcta{justify-self:center;font-size:17px;padding-block:12px}
+@media (max-width:420px){.btn-hero{padding:14px 18px 14px 14px;gap:12px}.play{width:40px;height:40px}.play::after{left:15px;top:10px}}
+
+/* ---------- Quiz overlay ---------- */
+.quiz{position:fixed;inset:0;z-index:20;background:var(--bg);display:flex;flex-direction:column;
+  padding:calc(env(safe-area-inset-top,0px) + 12px) max(16px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 14px) max(16px,env(safe-area-inset-left,0px))}
+.qtop{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font:500 13px var(--f-mono);color:var(--ink-2)}
+.qtop .pos{color:var(--ink);font-weight:600}
+.qtop .sc{display:flex;gap:10px}
+.qtop .sc .ok{color:var(--ok)} .qtop .sc .ko{color:var(--bad)}
+.qtop .sp{flex:1}
+.timer{height:4px;background:var(--line);border-radius:4px;overflow:hidden;margin-top:10px}
+.timer i{display:block;height:100%;width:100%;background:var(--acc);transform-origin:left;transition:transform .1s linear}
+.timer.off i{background:transparent}
+.stage{flex:1;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding-block:14px}
+.qtile{width:min(62vh,92vw,600px);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.qans{min-height:3.2em;text-align:center;font:800 clamp(20px,3.4vw,32px)/1.15 var(--f-puz);text-wrap:balance;max-width:24ch}
+.qans small{display:block;font:400 14px/1.4 var(--f-ui);color:var(--ink-2);margin-top:6px}
+.qans.hid{color:var(--mute);font:500 15px var(--f-mono)}
+.qctl{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.qctl .btn{padding:10px 16px;font-size:15px}
+.btn.ok{background:var(--ok);border-color:var(--ok);color:var(--tile);font-weight:600}
+.btn.ko{border-color:var(--bad);color:var(--bad);font-weight:600}
+.kbd{font:500 11px var(--f-mono);color:var(--mute);text-align:center;margin:0}
+.endc{display:grid;gap:14px;justify-items:center;text-align:center}
+.endc .big{font:900 clamp(56px,12vw,120px)/1 var(--f-puz);font-stretch:115%;color:var(--acc)}
+.endc p{margin:0;color:var(--ink-2);max-width:44ch}
+.miss{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px;justify-content:center;max-width:640px}
+.miss li{border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:13px;background:var(--surface)}
+@media (prefers-reduced-motion:reduce){.timer i{transition:none}}
+</style>
+</head>
+<body>
+
+
+<header class="hd">
+  <div class="wrap">
+    <div class="brand"><svg class="logo" viewBox="0 0 48 48" role="img" aria-label="Logo Dingbats"><rect width="48" height="48" rx="11" style="fill:var(--acc)"/><rect x="22.5" y="12" width="3" height="24" style="fill:var(--tile)"/><rect x="15" y="35" width="18" height="3.5" rx="1.5" style="fill:var(--tile)"/><rect x="9" y="13.5" width="30" height="3" rx="1.5" style="fill:var(--tile)"/><circle cx="24" cy="12" r="3.2" style="fill:var(--tile)"/><path d="M12 16 L8 26 M12 16 L16 26 M36 16 L32 26 M36 16 L40 26" style="stroke:var(--tile);fill:none" stroke-width="1.4" stroke-linecap="round"/><path d="M6.5 26 H17.5 Q17.5 31.5 12 31.5 Q6.5 31.5 6.5 26Z M30.5 26 H41.5 Q41.5 31.5 36 31.5 Q30.5 31.5 30.5 26Z" style="fill:var(--tile)"/></svg><p class="eyebrow">Rébus visuels · droit, procédure &amp; justice</p></div>
+    <h1>Dingbats <span class="flip">du</span> prétoire</h1>
+    <p class="lede" id="lede">Des expressions du droit cachées dans des jeux de lettres et de dessins. Lancez une partie, ou parcourez la bibliothèque pour voir chaque réponse.</p>
+  </div>
+</header>
+
+<section class="home" aria-label="Accueil">
+  <div class="wrap home-in">
+    <div class="panel quizp">
+      <h2>Jouer</h2>
+      <p class="hint">Trouvez l'expression cachée dans chaque rébus. Vous avez 30 secondes.</p>
+      <div class="field"><span class="flabel" id="lvLbl">Niveau</span>
+        <div class="seg big" id="hLv" role="group" aria-labelledby="lvLbl">
+          <button data-v="0" aria-pressed="true">Tous</button><button data-v="1" aria-pressed="false">Facile</button><button data-v="2" aria-pressed="false">Moyen</button><button data-v="3" aria-pressed="false">Corsé</button>
+        </div></div>
+      <div class="field"><span class="flabel" id="nLbl">Nombre de rébus</span>
+        <div class="seg big" id="hN" role="group" aria-labelledby="nLbl">
+          <button data-v="10" aria-pressed="true">10</button><button data-v="20" aria-pressed="false">20</button><button data-v="0" aria-pressed="false">Tous</button>
+        </div></div>
+      <p class="rec" id="rec" hidden></p>
+      <button class="btn-hero" id="heroQuiz"><span class="play" aria-hidden="true"></span><span class="lbl">Lancer la partie<small id="heroSub">10 rébus · chrono 30 s</small></span></button>
+    </div>
+
+    <div class="panel themesp">
+      <h2>Parcourir par thème</h2>
+      <div class="tlist" id="tlist"></div>
+    </div>
+
+    <div class="panel howp">
+      <h2>Comment jouer</h2>
+      <ol class="steps">
+        <li><b>Choisissez</b><span>Un niveau et le nombre de rébus de la partie.</span></li>
+        <li><b>Devinez</b><span>30 secondes par rébus pour trouver l'expression cachée.</span></li>
+        <li><b>Vérifiez</b><span>Révélez la réponse, dites honnêtement si vous l'aviez, et battez votre record.</span></li>
+      </ol>
+    </div>
+
+    <button class="btn-ghost libcta" id="openLib" aria-expanded="false" aria-controls="lib">Parcourir la bibliothèque <span aria-hidden="true">↓</span></button>
+  </div>
+</section>
+
+<div id="lib" hidden>
+<div class="bar">
+  <div class="wrap">
+    <div class="chips" id="themes" role="group" aria-label="Thèmes"></div>
+    <div class="seg" id="levels" role="group" aria-label="Niveau">
+      <button data-lv="0" aria-pressed="true">Tous</button>
+      <button data-lv="1" aria-pressed="false">Facile</button>
+      <button data-lv="2" aria-pressed="false">Moyen</button>
+      <button data-lv="3" aria-pressed="false">Corsé</button>
+    </div>
+    <div class="actions">
+      <button class="btn" id="shuffle">Mélanger</button>
+      <button class="btn" id="revealAll" aria-pressed="false">Révéler tout</button>
+      <button class="btn primary" id="startQuiz">Jouer ces rébus</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+    <p class="count" id="count"></p>
+    <div class="grid" id="grid"></div>
+  </div>
+</main>
+</div>
+
+<div class="quiz" id="quiz" hidden role="dialog" aria-modal="true" aria-label="Quiz rébus">
+  <div class="qtop">
+    <span class="pos" id="qpos"></span>
+    <span class="sc"><span class="ok" id="qok">✓ 0</span><span class="ko" id="qko">✗ 0</span></span>
+    <span class="sp"></span>
+    <button class="btn" id="qtimerBtn" aria-pressed="true">Chrono 30 s</button>
+    <button class="btn" id="qfs">Plein écran</button>
+    <button class="btn" id="qclose">Fermer</button>
+  </div>
+  <div class="timer" id="qtimer"><i id="qbar"></i></div>
+  <div class="stage" id="stage"></div>
+</div>
+
+<script>
+/* ---------- helpers ---------- */
+const w=(t,s='',c='')=>`<span class="w ${c}" style="${s}">${t}</span>`;
+const a=(t,s='',c='')=>w(t,s,'a '+c);
+const m=(t,s='',c='')=>w(t,s,'m '+c);
+const at=(x,y,tr='')=>`position:absolute;left:${x}%;top:${y}%;transform:translate(-50%,-50%) ${tr};`;
+const f=n=>`font-size:${n}cqw;`;
+const L=(word,sf,cf=()=>'')=>[...word].map((ch,i,arr)=>`<span class="w ${cf(i,arr.length)}" style="${sf(i,arr.length)}">${ch}</span>`).join('');
+const row=(...x)=>`<div class="row">${x.join('')}</div>`;
+const tight=(...x)=>`<div class="row tight">${x.join('')}</div>`;
+const col=(...x)=>`<div class="col">${x.join('')}</div>`;
+const sv=(inner)=>`<svg class="sv" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">${inner}</svg>`;
+const wave=`<svg class="inl" viewBox="0 0 100 16" style="width:62cqw;height:10cqw" aria-hidden="true"><path class="k ka" d="M2 8 Q8.5 0 15 8 T28 8 T41 8 T54 8 T67 8 T80 8 T93 8"/></svg>`;
+const circ=(word,r,size,cf)=>L(word,(i,n)=>{const t=-Math.PI/2+i*2*Math.PI/n;return at((50+r*Math.cos(t)).toFixed(2),(50+r*Math.sin(t)).toFixed(2),`rotate(${((t+Math.PI/2)*180/Math.PI).toFixed(1)}deg)`)+f(size)},cf);
+
+const R=[];
+const p=(th,lv,ans,r,note='')=>R.push({th,lv,ans,r,note});
+
+/* ---------- scene helpers ---------- */
+const S=i=>`<svg class="scene" viewBox="0 0 200 200" aria-hidden="true">${i}</svg>`;
+const T=(x,y,s,t,c='xi',ex='')=>`<text class="T ${c}" x="${x}" y="${y}" font-size="${s}" ${ex}>${t}</text>`;
+const r1=v=>Math.round(v*10)/10;
+const arcP=(cx,cy,r,a0,a1)=>{const p=a=>[r1(cx+r*Math.cos(a*Math.PI/180)),r1(cy+r*Math.sin(a*Math.PI/180))];const [x0,y0]=p(a0),[x1,y1]=p(a1);return `M${x0} ${y0} A${r} ${r} 0 ${a1-a0>180?1:0} 1 ${x1} ${y1}`;};
+const cloud=(x,y,k=1,c='xt')=>{const cs=[[-16,4,13],[0,-6,17],[17,3,12],[6,8,12],[-6,9,11]].map(([dx,dy,r])=>[r1(x+dx*k),r1(y+dy*k),r1(r*k)]);
+  return cs.map(([a,b,r])=>`<circle class="n si" stroke-width="4.4" cx="${a}" cy="${b}" r="${r}"/>`).join('')+cs.map(([a,b,r])=>`<circle class="${c}" cx="${a}" cy="${b}" r="${r}"/>`).join('');};
+const grass=(y,xs)=>xs.map(x=>`<path class="n si" stroke-width="1.4" d="M${x-4} ${y} L${x-6} ${y-6} M${x} ${y} V${y-8} M${x+4} ${y} L${x+6} ${y-6}"/>`).join('');
+const ghost=(word,size=24)=>S(`<ellipse class="xl" cx="100" cy="188" rx="40" ry="5"/><path class="xs si" stroke-width="2.4" d="M48 172 V96 A52 52 0 0 1 152 96 V172 L135 160 L118 174 L100 160 L82 174 L65 160Z"/><path class="n si" d="M50 116 Q32 112 28 98 M150 116 Q168 112 172 98"/><ellipse class="xi" cx="82" cy="86" rx="6" ry="9"/><ellipse class="xi" cx="118" cy="86" rx="6" ry="9"/><circle class="xt" cx="84" cy="83" r="2"/><circle class="xt" cx="120" cy="83" r="2"/><ellipse class="xi" cx="100" cy="104" rx="5" ry="4"/>${T(100,134,size,word)}<path class="n sa" stroke-width="1.6" d="M26 46 V58 M20 52 H32 M172 40 V50 M167 45 H177"/>`);
+const tombS=(word,size,sub)=>S(`<rect class="xs" x="-2" y="170" width="204" height="40"/><path class="xl si" stroke-width="2.4" d="M46 174 V86 A54 54 0 0 1 154 86 V174Z"/><path class="n si" stroke-width="1" d="M56 168 V88 A44 44 0 0 1 144 88 V168"/><path class="n si" stroke-width="1.2" d="M134 52 L128 66 L136 76 L130 90"/>${T(100,70,11,'R.I.P.','xm')}${T(100,112,size,word)}<line class="si" stroke-width="1.2" x1="70" y1="134" x2="130" y2="134"/>${T(100,148,10,sub,'xa')}${grass(174,[34,166,180])}<path class="n si" stroke-width="1.4" d="M66 174 V162 M76 174 V158"/><circle class="xa si" stroke-width="1" cx="66" cy="159" r="4"/><circle class="xa si" stroke-width="1" cx="76" cy="155" r="4"/>`);
+const bagP=(x,y,k=1)=>`<g transform="translate(${x} ${y}) scale(${k})"><path class="xd si" d="M-34 40 Q-46 0 -10 -12 L-18 -28 H18 L10 -12 Q46 0 34 40Z"/><path class="n sdi" stroke-width="3" d="M-12 -13 H12"/>${T(0,14,24,'€','xdi')}</g>`;
+const screw=(x,y,a,k=1)=>`<g transform="translate(${x} ${y}) rotate(${a}) scale(${k})"><path class="xh si" d="M-6 0 H6 L4 54 L0 64 L-4 54Z"/><path class="n si" stroke-width="1.4" d="M-6 10 L6 6 M-6 20 L6 16 M-6 30 L6 26 M-5 40 L5 36 M-4 50 L4 46"/><path class="xh si" d="M-16 0 Q-16 -12 0 -12 Q16 -12 16 0Z"/><path class="n si" d="M-8 -6 H8"/></g>`;
+const folder=(lbl,y0=96)=>`<path class="xa si" d="M24 ${y0-26} H80 L90 ${y0-16} H176 V176 H24Z"/>__IN__<path class="xs si" d="M24 ${y0} H176 V176 H24Z"/>${T(100,y0+44,22,lbl)}`;
+const balance=(tilt,L,R)=>{const rad=tilt*Math.PI/180,dy=r1(70*Math.sin(rad));
+ const pan=(x,y,items)=>`<path class="n si" stroke-width="1.2" d="M${x} ${y} L${x-20} ${y+50} M${x} ${y} L${x+20} ${y+50}"/>${items(x,y+50)}<path class="xs si" d="M${x-26} ${y+50} H${x+26} Q${x+24} ${y+68} ${x} ${y+68} Q${x-24} ${y+68} ${x-26} ${y+50}Z"/>`;
+ return `<path class="xi" d="M70 186 H130 L120 174 H80Z"/><rect class="xh si" x="96" y="56" width="8" height="120"/>${pan(30,56-dy,L)}${pan(170,56+dy,R)}<path class="xa si" d="M30 ${r1(52-dy)} L170 ${r1(52+dy)} L170 ${r1(60+dy)} L30 ${r1(60-dy)}Z"/><circle class="xi" cx="100" cy="56" r="7"/>`;};
+const kg=(x,y,t='1 kg')=>`<path class="xi" d="M${x-14} ${y} L${x-10} ${y-18} H${x+10} L${x+14} ${y}Z"/><path class="n si" stroke-width="2.4" d="M${x-5} ${y-18} V${y-24} H${x+5} V${y-18}"/>${T(x,y-8,6.5,t,'xt')}`;
+const road=(word)=>S(`<rect class="xs" x="-2" y="80" width="204" height="124"/><path class="xl si" stroke-width="1.4" d="M-2 84 Q30 64 60 80 Q100 60 140 78 Q170 64 202 80 V86 H-2Z"/><path class="xi" d="M95 82 H105 L178 204 H22Z"/><rect class="xt" x="99" y="88" width="2" height="5"/><rect class="xt" x="98.5" y="100" width="3" height="8"/><rect class="xt" x="98" y="118" width="4" height="12"/><text class="T xt" font-size="46" transform="translate(100 166) scale(1 .5)">${word}</text>${grass(196,[12,190])}`);
+const sheetDoc=(title,ts=24)=>`<rect class="xt si" x="44" y="18" width="112" height="164" rx="2"/>${T(100,48,ts,title)}<path class="n sx" stroke-width="2" d="M58 74 H142 M58 86 H142 M58 98 H132 M58 110 H142 M58 122 H120"/>`;
+const L2=(word,sf,cf=()=>'')=>[...word].map((ch,i,arr)=>`<span class="w ${cf(i,arr.length)}" style="${sf(i,arr.length)}">${ch}</span>`).join('');
+
+/* ---------- PROCÉDURE ---------- */
+p('proc',1,"Faire appel",S(`<path class="n sa" stroke-width="2.6" d="M38 52 Q28 66 38 80 M26 44 Q10 66 26 88 M162 52 Q172 66 162 80 M174 44 Q190 66 174 88"/>
+ <path class="xi" d="M44 86 Q40 66 58 64 H142 Q160 66 156 86 L146 94 Q142 82 130 82 H70 Q58 82 54 94Z"/>
+ <path class="xs si" d="M46 176 L58 114 Q62 102 74 102 H126 Q138 102 142 114 L154 176Z"/><circle class="xt si" cx="100" cy="144" r="22"/>
+ ${[0,1,2,3,4,5,6,7].map(k=>{const a=(k*36-200)*Math.PI/180;return `<circle class="xi" cx="${r1(100+15*Math.cos(a))}" cy="${r1(144+15*Math.sin(a))}" r="2.6"/>`;}).join('')}<circle class="xa" cx="100" cy="144" r="6"/>
+ <path class="n si" stroke-width="2" d="M154 166 Q176 168 172 182 Q168 194 186 194"/>`),"Un téléphone qui sonne : un appel.");
+p('proc',2,"Renvoi à une date ultérieure",S((()=>{const sh=(x,y,d,cross)=>`<rect class="xt si" x="${x}" y="${y}" width="66" height="78" rx="3"/><rect class="xa si" x="${x}" y="${y}" width="66" height="16" rx="3"/><rect class="xi" x="${x+14}" y="${y-6}" width="5" height="12" rx="2"/><rect class="xi" x="${x+47}" y="${y-6}" width="5" height="12" rx="2"/>${T(x+33,y+42,26,d)}${T(x+33,y+66,8.5,'AFFAIRE','xm')}${cross?`<path class="n sr" stroke-width="3" d="M${x+8} ${y+28} L${x+58} ${y+72} M${x+58} ${y+28} L${x+8} ${y+72}"/>`:''}`;
+ return sh(18,74,'12',1)+sh(116,96,'30',0)+`<path class="n sa" stroke-width="3" d="M52 62 Q96 16 146 82"/><path class="xa" d="M138 80 L148 92 L154 76Z"/>`;})()),"L'AFFAIRE passe du 12 au 30 : elle est renvoyée.");
+p('proc',2,"Audience à huis clos",S(`<rect class="xl" x="0" y="0" width="200" height="186"/><rect class="xh si" x="52" y="26" width="96" height="162"/><rect class="xd si" x="60" y="34" width="80" height="154"/>
+ <rect class="n sdi" stroke-width="1.4" opacity=".5" x="70" y="92" width="60" height="40"/><rect class="n sdi" stroke-width="1.4" opacity=".5" x="70" y="140" width="60" height="40"/>
+ <rect class="xt si" x="66" y="48" width="68" height="26" rx="2"/>${T(100,61.5,10.5,'AUDIENCE')}
+ <path class="n si" stroke-width="3" d="M120 120 V113 A6 6 0 0 1 132 113 V120"/><rect class="xi" x="116" y="118" width="20" height="16" rx="2"/><circle class="xt" cx="126" cy="125" r="2"/>
+ <path class="n si" stroke-width="2" d="M0 188 H200"/>`),"AUDIENCE derrière une porte (un huis) fermée.");
+p('proc',2,"Le délai court",S(`<path class="n sa" stroke-width="2.4" d="M30 120 H48 M24 134 H46 M32 148 H50"/>
+ <rect class="xd si" x="58" y="26" width="84" height="10" rx="2"/><rect class="xd si" x="58" y="138" width="84" height="10" rx="2"/>
+ <path class="xs si" d="M68 36 Q68 78 97 87 Q68 96 68 138 H132 Q132 96 103 87 Q132 78 132 36Z"/>
+ <path class="xa" d="M80 60 Q84 78 100 86 Q116 78 120 60Z"/><path class="n sa" stroke-width="1.6" d="M100 86 V124"/><path class="xa" d="M74 138 Q100 112 126 138Z"/>
+ <path class="n si" stroke-width="4" d="M84 148 L72 166 L58 172 M116 148 L132 160 L150 154"/><ellipse class="xi" cx="54" cy="174" rx="9" ry="4"/><ellipse class="xi" cx="154" cy="152" rx="9" ry="4" transform="rotate(-20 154 152)"/>`),"Un sablier (un délai) qui court.");
+p('proc',1,"La charge de la preuve",S(`<path class="n si" d="M100 0 V40"/><path class="n si" stroke-width="4" d="M100 40 V52 Q100 62 92 62 Q84 62 84 54"/>
+ <path class="n si" stroke-width="1.6" d="M100 54 L56 98 M100 54 L144 98"/><rect class="xd si" x="48" y="98" width="104" height="72"/>
+ <path class="n sdi" stroke-width="1.4" opacity=".4" d="M48 122 H152 M48 146 H152"/>${T(100,134,22,'PREUVE','xdi')}
+ <path class="n sm" stroke-width="1.6" d="M60 182 V190 M100 182 V194 M140 182 V190"/>`),"La PREUVE soulevée comme une charge.");
+p('proc',2,"Les pièces du dossier",S(folder('DOSSIER').replace('__IN__',[[54,82],[84,70],[116,80],[146,68]].map(([x,y])=>`<circle class="xh si" cx="${x}" cy="${y}" r="13"/>${T(x,y+.5,12,'€')}`).join(''))+`<circle class="xh si" cx="184" cy="184" r="9"/>${T(184,184.5,9,'€')}`),"Des pièces (de monnaie) dans un DOSSIER.");
+p('proc',2,"Verser au dossier",S(folder('DOSSIER',120).replace('__IN__','')+`<path class="n sa" stroke-width="5" d="M70 60 Q88 72 100 110"/>
+ <g transform="translate(52 44) rotate(-40)"><path class="xs si" d="M-18 -26 H14 L22 30 H-26Z"/><path class="n si" stroke-width="4" d="M-22 -10 Q-40 0 -24 20"/><path class="xs si" d="M14 -26 L26 -34 L18 -16Z"/></g>`),"Un pichet qui verse dans le DOSSIER.");
+p('proc',1,"Dépôt de plainte",S(`<rect class="xh si" x="94" y="140" width="12" height="52"/><path class="xa si" d="M56 80 Q56 46 100 46 Q144 46 144 80 V144 H56Z"/>
+ <rect class="xi" x="72" y="76" width="56" height="8" rx="3"/><rect class="xt" opacity=".9" x="74" y="108" width="52" height="16" rx="2"/>${T(100,116.5,9,'LETTRES','xa')}
+ <g transform="translate(100 56) rotate(-8)"><rect class="xt si" x="-34" y="-22" width="68" height="40"/><path class="n si" stroke-width="1.2" d="M-34 -22 L0 0 L34 -22"/>${T(0,8,10,'PLAINTE','xa')}</g>`),"Une PLAINTE déposée dans la boîte.");
+p('proc',2,"Classement sans suite",col(w('CLASSEMENT',f(11)),row(a('−',f(15)),m('SUITE',f(13)))),"CLASSEMENT moins la SUITE.");
+p('proc',2,"Non-lieu",S(`<rect class="xh si" x="56" y="120" width="8" height="74"/><rect class="xh si" x="136" y="120" width="8" height="74"/>
+ <rect class="xt sr" stroke-width="7" x="28" y="52" width="144" height="72" rx="8"/>${T(100,89,36,'LIEU')}<path class="n sr" stroke-width="9" d="M38 118 L162 58"/>`),"Panneau de sortie du LIEU : non-lieu.");
+p('proc',1,"En première instance",S(`<rect class="xs si" x="26" y="112" width="50" height="72"/><rect class="xa si" x="76" y="84" width="50" height="100"/><rect class="xs si" x="126" y="128" width="50" height="56"/>
+ ${T(51,134,18,'2','xa')}${T(101,108,22,'1','xt')}${T(151,148,16,'3','xa')}${T(101,66,20,'INSTANCE')}<path class="n sa" stroke-width="2" d="M60 40 L66 50 M101 30 V42 M142 40 L136 50"/>`),"INSTANCE sur la première marche du podium.");
+p('proc',2,"Saisir le juge",S(`<rect class="xs si" x="26" y="8" width="148" height="184" rx="6"/><rect class="xt si" x="36" y="18" width="128" height="130"/><path class="n si" stroke-width="3" d="M36 28 H164"/>
+ <rect class="xi" x="92" y="24" width="16" height="8"/><path class="n si" d="M100 32 V66"/><path class="n si" stroke-width="3" d="M100 66 L82 78 L80 96 M100 66 L118 78 L120 96"/>
+ ${T(100,96,22,'JUGE','xa')}<circle class="xa" cx="54" cy="138" r="9"/><circle class="xh" cx="72" cy="140" r="7"/><circle class="xa" cx="146" cy="138" r="8"/>
+ <rect class="xi" x="120" y="160" width="36" height="20" rx="3"/><circle class="xa" cx="50" cy="170" r="7"/>`),"Une pince qui saisit le JUGE.");
+p('proc',3,"Pourvoi en cassation",tight(w('CASSA',f(8.8)),a('POURVOI',f(8.8)),w('TION',f(8.8))),"POURVOI en (dans) CASSATION.");
+p('proc',3,"Mise en délibéré",tight(w('DÉLI',f(12)),a('MISE',f(12)),w('BÉRÉ',f(12))),"MISE en (dans) DÉLIBÉRÉ.");
+p('proc',1,"Procès-verbal",S(`<path class="xs si" d="M24 40 H176 Q186 40 186 50 V120 Q186 130 176 130 H76 L50 158 L56 130 H24 Q14 130 14 120 V50 Q14 40 24 40Z"/>${T(100,86,34,'PROCÈS')}`),"PROCÈS dans une bulle de parole : verbal.");
+p('proc',2,"Placer sous scellés",S(`<path class="xs si" opacity=".9" d="M40 40 H160 V176 Q160 184 152 184 H48 Q40 184 40 176Z"/><rect class="xa si" x="38" y="34" width="124" height="12" rx="2"/>
+ <rect class="xt si" x="54" y="60" width="92" height="30" rx="2"/>${T(100,70,9,'SCELLÉ N° 2026-114')}<path class="n sx" stroke-width="1.4" d="M62 82 H138"/>
+ <g transform="translate(100 136) rotate(-20)"><circle class="n si" stroke-width="4" cx="-24" cy="0" r="12"/><path class="n si" stroke-width="4" d="M-12 0 H30 M20 0 V10 M28 0 V8"/></g>
+ <circle class="xv si" cx="146" cy="46" r="13"/>${T(146,46.5,10,'RF','xt')}`),"Une pièce rangée sous scellés.");
+
+/* ---------- PÉNAL ---------- */
+p('penal',3,"Mis en examen",tight(w('EXA',f(14)),a('MIS',f(14)),w('MEN',f(14))),"MIS en (dans) EXAMEN.");
+p('penal',1,"Garde à vue",S(`${T(66,100,26,'GARDE À')}<path class="xt si" d="M130 100 Q158 70 188 100 Q158 130 130 100Z"/><circle class="xa" cx="159" cy="100" r="13"/><circle class="xi" cx="159" cy="100" r="6"/><circle class="xt" cx="162" cy="96" r="2.4"/><path class="n si" stroke-width="1.4" d="M140 84 L136 78 M159 78 V71 M178 84 L182 78"/>`),"GARDE à VUE (un œil).");
+p('penal',2,"Liberté sous caution",S(bagP(100,52,1)+`<line class="si" x1="30" y1="112" x2="170" y2="112"/>`+T(100,144,32,'LIBERTÉ')),"LIBERTÉ sous une caution (un sac d'argent).");
+p('penal',2,"Casier judiciaire vierge",S(`<rect class="xh si" x="54" y="14" width="92" height="178" rx="3"/><rect class="xs si" x="62" y="134" width="76" height="50"/><rect class="xs si" x="62" y="22" width="76" height="50"/><rect class="xi" x="88" y="44" width="24" height="5" rx="2"/><rect class="xi" x="88" y="156" width="24" height="5" rx="2"/>
+ <path class="xi" d="M62 78 H138 L156 96 H44Z"/><path class="xs si" d="M44 96 H156 V128 H44Z"/><path class="xt" d="M66 82 H134 L146 94 H54Z"/><rect class="xt si" x="66" y="104" width="68" height="16" rx="2"/>${T(100,112.5,8.5,'JUDICIAIRE')}`),"Le tiroir JUDICIAIRE du casier est vide.");
+p('penal',1,"Circonstances atténuantes",`<div class="row tight" style="align-items:center">${L2('CIRCONSTANCES',i=>f(r1(13-i*0.6))+`opacity:${r1(1-i*0.06)}`)}</div>`,"CIRCONSTANCES qui s'atténuent.");
+p('penal',1,"Récidive",col(w('DÉLIT',f(14)),w('DÉLIT',f(14)),row(w('DÉLIT',f(14)),a('↻',f(14)))),"Le même DÉLIT, encore et encore.");
+p('penal',1,"Pris en flagrant délit",S(`<polygon class="xs" points="${Array.from({length:16},(_,k)=>{const a=k*Math.PI/8,r=k%2?40:62;return `${r1(150+r*Math.cos(a))},${r1(100+r*Math.sin(a))}`;}).join(' ')}"/>
+ <rect class="xi" x="14" y="82" width="82" height="58" rx="6"/><rect class="xa si" x="34" y="70" width="28" height="14" rx="2"/><circle class="xs si" cx="56" cy="112" r="18"/><circle class="xi" cx="56" cy="112" r="9"/><circle class="xt" cx="60" cy="108" r="3"/>
+ ${T(150,101,20,'DÉLIT','xa')}<path class="n sa" stroke-width="2" d="M66 62 L76 50 M54 60 V46 M80 70 L94 64"/>`),"DÉLIT pris dans le flash.");
+p('penal',1,"Peine avec sursis",row(w('PEINE',f(16)),`<span style="display:flex;gap:2.4cqw"><i style="display:block;width:4cqw;height:15cqw;background:var(--acc);border-radius:1cqw"></i><i style="display:block;width:4cqw;height:15cqw;background:var(--acc);border-radius:1cqw"></i></span>`),"PEINE mise en pause.");
+p('penal',2,"Peine plancher",S(`<rect class="xd si" x="-2" y="124" width="204" height="80"/>${[148,172].map(y=>`<path class="n sdi" stroke-width="1.4" opacity=".5" d="M-2 ${y} H202"/>`).join('')}${[[40,124],[120,124],[80,148],[160,148],[30,172],[110,172]].map(([x,y])=>`<path class="n sdi" stroke-width="1.4" opacity=".5" d="M${x} ${y} V${y+24}"/><circle class="xdi" opacity=".6" cx="${x+6}" cy="${y+6}" r="1.4"/>`).join('')}${T(100,102,38,'PEINE')}`),"PEINE posée sur un plancher.");
+p('penal',3,"Peine incompressible",S(`<rect class="xh si" x="94" y="0" width="12" height="30"/><rect class="xi" x="30" y="30" width="140" height="18" rx="2"/><rect class="xi" x="30" y="150" width="140" height="18" rx="2"/><rect class="xh si" x="20" y="168" width="160" height="10"/>
+ <path class="n sa" stroke-width="2.6" d="M100 56 V68 M94 62 L100 68 L106 62 M100 142 V130 M94 136 L100 130 L106 136"/>${T(100,99,38,'PEINE')}<path class="n sr" stroke-width="2.4" d="M18 92 L8 86 M18 104 L6 104 M182 92 L192 86 M182 104 L194 104"/>`),"La presse n'arrive pas à comprimer la PEINE.");
+p('penal',2,"Témoin à charge",S(`<path class="n si" stroke-width="1.5" d="M0 146 H200"/><rect class="xi" x="12" y="108" width="122" height="12"/>${T(73,93,23,'TÉMOIN','xa')}
+ <path class="xa si" d="M134 120 V82 Q134 76 140 76 H168 L186 100 V120Z"/><path class="xs si" stroke-width="1.4" d="M146 84 H164 L176 100 H146Z"/>
+ ${[40,104,166].map(x=>`<circle class="xi" cx="${x}" cy="130" r="13"/><circle class="xt" cx="${x}" cy="130" r="4"/>`).join('')}`),"TÉMOIN transporté à charge.");
+p('penal',1,"Mandat d'arrêt",S(`<rect class="xh si" x="95" y="140" width="10" height="56"/><polygon class="xr si" stroke-width="2.4" points="${Array.from({length:8},(_,k)=>{const a=(22.5+45*k)*Math.PI/180;return `${r1(100+64*Math.cos(a))},${r1(86+64*Math.sin(a))}`;}).join(' ')}"/>
+ <polygon class="n st" stroke-width="3" points="${Array.from({length:8},(_,k)=>{const a=(22.5+45*k)*Math.PI/180;return `${r1(100+56*Math.cos(a))},${r1(86+56*Math.sin(a))}`;}).join(' ')}"/>${T(100,87,24,'MANDAT','xt')}`),"MANDAT sur un panneau d'arrêt.");
+p('penal',2,"Faire de la prison ferme",S(`<rect class="xs" x="-2" y="180" width="204" height="24"/><path class="xv si" d="M36 182 V98 L100 50 L164 98 V182Z"/><path class="xi" d="M28 102 L100 44 L172 102 L164 106 L100 56 L36 106Z"/>
+ <rect class="xt si" x="74" y="122" width="52" height="60"/><path class="n si" stroke-width="2" d="M74 122 L126 182 M126 122 L74 182"/><rect class="xt si" x="60" y="80" width="80" height="24" rx="2"/>${T(100,92.5,15,'PRISON')}${grass(182,[20,182])}`),"PRISON sur une ferme.");
+p('penal',2,"Le bénéfice du doute",S(`<path class="n si" d="M30 20 V134 H186"/><path class="n sx" stroke-width="1" stroke-dasharray="3 4" d="M30 104 H186 M30 74 H186 M30 44 H186"/>
+ <path class="n sg" stroke-width="3.4" d="M36 124 L70 108 L96 114 L130 76 L168 40"/><path class="xg" d="M172 30 L176 48 L160 42Z"/>${[[70,108],[96,114],[130,76]].map(([x,y])=>`<circle class="xg" cx="${x}" cy="${y}" r="4"/>`).join('')}${T(108,166,30,'DOUTE')}`),"Une courbe de bénéfice au-dessus de DOUTE.");
+p('penal',2,"Le mobile du crime",S((()=>{const lt=(x,y,c)=>`<path class="n si" stroke-width="1.2" d="M${x} ${y-40} V${y-16}"/><circle class="xs si" cx="${x}" cy="${y}" r="16"/>${T(x,y+.5,18,c,'xa')}`;
+ return `<path class="n si" d="M100 0 V24"/><path class="n si" stroke-width="2.4" d="M30 24 H170"/><path class="n si" stroke-width="2.4" d="M116 70 H180"/><path class="n si" stroke-width="1.2" d="M148 24 V70"/>`+lt(30,80,'C')+lt(68,104,'R')+`<path class="n si" stroke-width="1.2" d="M116 70 V94"/><circle class="xs si" cx="116" cy="110" r="16"/>${T(116,110.5,18,'I','xa')}<path class="n si" stroke-width="1.2" d="M150 70 V122"/><circle class="xs si" cx="150" cy="138" r="16"/>${T(150,138.5,18,'M','xa')}<path class="n si" stroke-width="1.2" d="M180 70 V84"/><circle class="xs si" cx="180" cy="100" r="16"/>${T(180,100.5,18,'E','xa')}`;})()),"Les lettres de CRIME suspendues à un mobile.");
+p('penal',1,"Un alibi en béton",S(`<path class="xl si" d="M30 76 L56 54 H178 L152 76Z"/><path class="xh si" d="M152 76 L178 54 V146 L152 168Z"/><rect class="xh si" x="30" y="76" width="122" height="92"/>
+ ${[[44,92],[70,150],[120,96],[138,154],[96,160],[52,130],[146,112]].map(([x,y])=>`<circle class="xm" cx="${x}" cy="${y}" r="1.6"/>`).join('')}${T(91,123,30,'ALIBI')}`),"ALIBI coulé dans un bloc de béton.");
+p('penal',1,"Pièce à conviction",S(`<path class="xa si" stroke-width="2.4" d="M40 62 H84 A14 14 0 1 1 116 62 H160 V98 A14 14 0 1 1 160 126 V162 H40 V126 A14 14 0 1 0 40 98Z"/>${T(100,112,14,'CONVICTION','xt')}`),"Une pièce (de puzzle) à CONVICTION.");
+p('penal',1,"Délit de fuite",S(`<path class="n sx" stroke-width="5" stroke-dasharray="8 6" d="M0 150 Q60 146 120 150 M0 162 Q60 158 120 162"/>${cloud(26,128,.7,'xl')}<path class="n sa" stroke-width="2.6" d="M38 84 H70 M30 100 H64 M40 116 H70"/>
+ <text class="T xi" font-size="40" transform="translate(128 100) skewX(-16)">DÉLIT</text>`),"DÉLIT qui prend la fuite.");
+p('penal',1,"Blanchiment d'argent",S(`<rect class="xt si" x="36" y="16" width="128" height="172" rx="10"/><path class="n si" d="M36 46 H164"/><circle class="xs si" cx="58" cy="31" r="6"/><rect class="xi" x="96" y="26" width="52" height="10" rx="2"/>
+ <circle class="xh si" cx="100" cy="114" r="50"/><circle class="xs si" cx="100" cy="114" r="38"/>
+ ${[[86,104,-20],[112,124,25],[96,132,8]].map(([x,y,a])=>`<g transform="translate(${x} ${y}) rotate(${a})"><rect class="xa" x="-15" y="-8" width="30" height="16" rx="1.5"/>${T(0,.5,10,'€','xt')}</g>`).join('')}
+ <circle class="n st" stroke-width="1.6" cx="118" cy="96" r="4"/><circle class="n st" stroke-width="1.6" cx="80" cy="128" r="3"/>`),"De l'argent dans la machine à laver.");
+p('penal',2,"Remise de peine",S(`${T(84,120,40,'PEINE')}<path class="n si" stroke-width="1.2" d="M134 22 Q140 32 150 40"/><g transform="translate(156 52) rotate(24)"><path class="xa si" d="M-30 -17 H16 L30 0 L16 17 H-30Z"/><circle class="xt si" stroke-width="1" cx="20" cy="0" r="3"/>${T(-8,1,13,'−30 %','xt')}</g>`),"PEINE soldée : une remise.");
+p('penal',1,"Cumul des peines",`<div class="col" style="gap:.6cqw">${[-4,5,-2,6,-3].map((r,i)=>w('PEINE',f(10)+`transform:rotate(${r}deg) translateX(${i%2?3:-3}cqw)`)).join('')}</div>`,"Des PEINES empilées.");
+p('penal',2,"Confusion des peines",`${w('PEINE',at(50,50,'rotate(-12deg)')+f(17))}${w('PEINE',at(52,48,'rotate(9deg)')+f(17)+'opacity:.7','a')}${w('PEINE',at(48,53,'rotate(2deg)')+f(17)+'opacity:.45','m')}`,"Des PEINES confondues.");
+p('penal',3,"Faux témoignage",S(`<path class="n si" stroke-width="8" d="M40 30 Q70 70 120 120"/><path class="n sd" stroke-width="4.4" d="M40 30 Q70 70 120 120"/><path class="n si" stroke-width="5" d="M64 56 L52 68"/>
+ <path class="xh si" d="M40 30 Q90 4 164 26 Q110 22 46 40Z"/>${T(100,160,18,'TÉMOIGNAGE')}`),"Une faux + TÉMOIGNAGE.");
+p('penal',1,"Témoin oculaire",S(`${T(100,100,30,'TÉMOIN')}<circle class="n si" stroke-width="3" cx="110" cy="100" r="17"/><path class="n si" stroke-width="1.4" d="M126 108 Q150 140 140 176"/>`),"TÉMOIN avec un monocle : oculaire.");
+
+/* ---------- JURIDICTIONS & MÉTIERS ---------- */
+p('jur',2,"Cour d'assises",S((()=>{let s=`<path class="n si" stroke-width="1.5" d="M0 182 H200"/>`;[...'COUR'].forEach((c,i)=>{const x=34+i*44;s+=`<rect class="xa si" x="${x-17}" y="62" width="34" height="62" rx="4"/>${T(x,93,22,c,'xt')}<rect class="xs si" x="${x-19}" y="124" width="38" height="10" rx="2"/><path class="n si" stroke-width="3" d="M${x-15} 134 V180 M${x+15} 134 V180"/>`;});return s;})()),"La COUR sur des sièges : assises.");
+p('jur',1,"Le banc des accusés",S(`<path class="n si" stroke-width="1.5" d="M0 182 H200"/><rect class="xd si" x="14" y="58" width="172" height="12" rx="2"/><rect class="xd si" x="14" y="76" width="172" height="12" rx="2"/>
+ ${T(100,108,26,'ACCUSÉS')}<rect class="xd si" x="10" y="124" width="180" height="14" rx="2"/><path class="n si" stroke-width="5" d="M28 70 V180 M172 70 V180 M100 138 V180"/>`),"Des ACCUSÉS assis sur un banc.");
+p('jur',1,"Le parquet",S((()=>{let s='';for(let r=-1;r<12;r++){const y0=r*18;let pts=[];for(let x=-20;x<=220;x+=20)pts.push(`${x},${y0+(Math.abs(x/20)%2?10:0)}`);let pts2=[...pts].reverse().map(p=>{const [x,y]=p.split(',');return `${x},${+y+18}`;});s+=`<polygon class="xd" opacity="${r%2?1:.75}" points="${pts.join(' ')} ${pts2.join(' ')}"/><polyline class="n sdi" stroke-width="1" opacity=".3" points="${pts.join(' ')}"/>`;}
+ for(let x=0;x<=200;x+=20)s+=`<line class="sdi" stroke-width="1" opacity=".25" x1="${x}" y1="0" x2="${x}" y2="200"/>`;
+ return s+`<rect class="xt si" x="70" y="82" width="60" height="36" rx="4"/>${T(100,100.5,22,'LE')}`;})()),"Un parquet (de bois) : le ministère public.");
+p('jur',1,"Magistrat du siège",S(`<path class="n si" stroke-width="1.5" d="M0 190 H200"/><rect class="xa si" x="46" y="22" width="108" height="104" rx="14"/>${T(100,72,14,'MAGISTRAT','xt')}
+ <rect class="xs si" x="40" y="122" width="120" height="24" rx="6"/><rect class="xa si" x="30" y="96" width="18" height="50" rx="6"/><rect class="xa si" x="152" y="96" width="18" height="50" rx="6"/><path class="n si" stroke-width="5" d="M52 146 L46 188 M148 146 L154 188"/>`),"MAGISTRAT sur un siège.");
+p('jur',2,"Magistrat debout",col(w('MAGISTRAT',f(9.5),'vert')),"MAGISTRAT debout : le parquet.");
+p('jur',2,"Effet de manche",S(`<path class="xi" d="M-10 20 Q60 30 110 80 Q130 100 146 130 L104 158 Q88 130 64 112 Q30 88 -10 90Z"/><path class="xt si" stroke-width="1.6" d="M104 158 L146 130 L152 140 L110 168Z"/>
+ <path class="n sa" stroke-width="2.4" d="M164 108 Q182 120 176 140 M170 92 Q196 110 190 146"/>${T(150,178,22,'EFFET','xa')}<path class="xa" d="M184 60 L187 68 L195 70 L187 72 L184 80 L181 72 L173 70 L181 68Z"/>`),"Une manche de robe qui fait de l'EFFET.");
+p('jur',2,"Tribunal correctionnel",S(`${T(100,96,30,'TRIBUNAL')}<path class="n sr" stroke-width="2.4" d="M30 116 Q40 110 50 116 T70 116 T90 116"/><ellipse class="n sr" stroke-width="2" cx="124" cy="96" rx="12" ry="16"/><path class="n sr" stroke-width="2.4" d="M150 70 L156 60 L162 70"/>${T(156,50,14,'N','xr')}
+ <g transform="translate(150 160) rotate(-40)"><rect class="xr si" x="-30" y="-6" width="60" height="12" rx="3"/><path class="xh si" d="M30 -6 L42 0 L30 6Z"/></g>`),"TRIBUNAL plein de corrections.");
+p('jur',2,"Inscrit au barreau",S(`<rect class="xi" x="0" y="70" width="14" height="50"/><rect class="xi" x="186" y="70" width="14" height="50"/><rect class="xh si" x="8" y="78" width="184" height="34" rx="17"/><path class="n st" stroke-width="3" opacity=".8" d="M24 86 H176"/>${T(100,96,20,'AVOCAT')}`),"AVOCAT inscrit sur un barreau.");
+p('jur',3,"Bâtonnier",S(`<path class="n si" stroke-width="10" d="M20 170 L78 40"/><path class="n sd" stroke-width="6" d="M20 170 L78 40"/><path class="n si" stroke-width="2" d="M44 116 L36 108 M58 86 L68 80"/>${T(100,110,24,'+','xa')}${T(150,110,34,'NIER')}`),"BÂTON + NIER.");
+p('jur',3,"Greffe du tribunal",S(`<path class="xd si" d="M70 196 Q80 140 76 90 L104 90 Q100 140 112 196Z"/><path class="n si" stroke-width="9" d="M90 92 Q104 56 150 30"/><path class="n sd" stroke-width="5" d="M90 92 Q104 56 150 30"/>
+ <path class="n sa" stroke-width="4" d="M82 96 L102 90 M80 104 L104 98 M82 112 L104 106"/>${[[152,26,-30],[136,36,40],[160,40,10]].map(([x,y,a])=>`<ellipse class="xs si" stroke-width="1.4" cx="${x}" cy="${y}" rx="11" ry="5.5" transform="rotate(${a} ${x} ${y})"/>`).join('')}
+ <rect class="xt si" x="54" y="134" width="74" height="22" rx="2"/>${T(91,145.5,11,'TRIBUNAL')}`),"Une greffe sur l'arbre du TRIBUNAL.");
+p('jur',1,"Avocat du diable",S(`${T(100,120,38,'AVOCAT')}<path class="xr si" stroke-width="1.4" d="M38 96 Q30 76 44 62 Q42 80 52 94Z"/><path class="xr si" stroke-width="1.4" d="M162 96 Q170 76 156 62 Q158 80 148 94Z"/><path class="n sr" stroke-width="3" d="M176 134 Q196 150 178 172"/><path class="xr" d="M170 168 L182 180 L186 164Z"/>`),"AVOCAT avec cornes et queue.");
+p('jur',2,"Avocat général",S(`<path class="xi" d="M62 82 V54 Q62 44 100 44 Q138 44 138 54 V82Z"/><rect class="xa" x="58" y="80" width="84" height="8" rx="2"/><path class="xi" d="M56 88 H144 L150 96 H50Z"/>${[74,87,100,113,126].map(x=>T(x,62,10,'★','xa')).join('')}${T(100,136,36,'AVOCAT')}`),"AVOCAT coiffé d'un képi de général.");
+p('jur',1,"Juge de paix",S(`<circle class="n sa" stroke-width="6" cx="100" cy="58" r="36"/><path class="n sa" stroke-width="6" d="M100 22 V94 M100 58 L74 84 M100 58 L126 84"/>${T(100,146,40,'JUGE')}`),"JUGE sous un symbole de paix.");
+p('jur',2,"Garde des Sceaux",S(`${T(100,40,30,'GARDE')}${T(100,72,12,'DES','xm')}${[62,138].map(x=>`<path class="n si" stroke-width="2.4" d="M${x-24} 112 Q${x} 76 ${x+24} 112"/><path class="xh si" d="M${x-26} 110 H${x+26} L${x+18} 176 H${x-18}Z"/><path class="n si" stroke-width="1.4" d="M${x-24} 126 H${x+24} M${x-21} 160 H${x+21}"/>`).join('')}<path class="xw" d="M114 112 H162 L161 120 H115Z"/>`),"GARDE des seaux (Sceaux).");
+p('jur',1,"Être juge et partie",row(w('JUGE',f(12)),a('=',f(12)),w('PARTIE',f(12))),"JUGE égale PARTIE.");
+p('jur',1,"Trancher le litige",S(`<g transform="translate(0 0)">${T(46,128,36,'LI')}${T(103,132,36,'TI')}${T(160,126,36,'GE')}</g>
+ <path class="n sa" stroke-width="1.6" stroke-dasharray="3 3" d="M74 96 V168 M131 96 V168"/>
+ <g transform="translate(100 56) rotate(-12)"><path class="xh si" d="M-70 -8 H44 Q56 -8 56 6 H-70Z"/><rect class="xi" x="-110" y="-8" width="40" height="14" rx="4"/></g>`),"LITIGE tranché en morceaux.");
+p('jur',2,"Conflit d'intérêts",S(`${T(52,104,58,'%','xa')}${T(148,104,58,'%')}<polygon class="xr" points="${Array.from({length:14},(_,k)=>{const a=k*Math.PI/7,r=k%2?8:20;return `${r1(100+r*Math.cos(a))},${r1(100+r*Math.sin(a))}`;}).join(' ')}"/>`),"Deux % (intérêts) qui s'affrontent.");
+p('jur',1,"Secret professionnel",S(`<rect class="xh si" x="34" y="24" width="132" height="152" rx="8"/><rect class="xs si" x="44" y="34" width="112" height="132" rx="4"/>
+ <circle class="xt si" cx="100" cy="86" r="24"/>${Array.from({length:12},(_,k)=>{const a=k*Math.PI/6;return `<line class="si" stroke-width="1.4" x1="${r1(100+18*Math.cos(a))}" y1="${r1(86+18*Math.sin(a))}" x2="${r1(100+23*Math.cos(a))}" y2="${r1(86+23*Math.sin(a))}"/>`;}).join('')}<circle class="xa" cx="100" cy="86" r="6"/>
+ <path class="n si" stroke-width="5" d="M140 70 V102"/><rect class="xt si" x="70" y="128" width="60" height="24" rx="2"/>${T(100,140.5,16,'PRO')}<rect class="xi" x="44" y="176" width="16" height="8"/><rect class="xi" x="140" y="176" width="16" height="8"/>`),"PRO enfermé dans un coffre : secret professionnel.");
+p('jur',1,"Code civil",S(`<rect class="xa si" x="30" y="40" width="88" height="128" rx="3"/><rect class="xi" x="30" y="40" width="12" height="128"/><path class="n st" stroke-width="1.4" d="M52 60 H108 M52 150 H108"/>${T(80,96,22,'CODE','xt')}
+ <path class="xt si" stroke-width="1.4" d="M66 124 L80 130 L94 124 V138 L80 132 L66 138Z"/>
+ <path class="xt si" d="M116 22 H186 Q194 22 194 30 V56 Q194 64 186 64 H136 L124 76 L126 64 H116 Q108 64 108 56 V30 Q108 22 116 22Z"/>${T(151,43,10.5,'Après vous !')}`),"Un CODE très poli : civil.");
+
+/* ---------- CONTRATS & OBLIGATIONS ---------- */
+p('contrat',1,"Rupture de contrat",S(`<path class="xt si" d="M26 40 H96 L90 60 L100 80 L88 100 L98 120 L90 140 L96 160 H26Z"/>${T(60,66,20,'CON')}<path class="n sx" stroke-width="2" d="M36 96 H84 M36 110 H80 M36 124 H84"/>
+ <g transform="rotate(7 140 100) translate(10 4)"><path class="xt si" d="M104 40 H174 V160 H104 L98 140 L106 120 L96 100 L108 80 L98 60Z"/>${T(140,66,20,'TRAT')}<path class="n sx" stroke-width="2" d="M114 96 H164 M112 110 H164 M114 124 H158"/></g>`),"CONTRAT déchiré en deux.");
+p('contrat',1,"Les petites lignes du contrat",S(`${sheetDoc('CONTRAT',22)}<path class="n sx" stroke-width="1" d="M58 160 H110"/><path class="xs" opacity=".85" d="M114 160 m-26 0 a26 26 0 1 0 52 0 a26 26 0 1 0 -52 0"/><circle class="n si" stroke-width="4" cx="114" cy="160" r="26"/><path class="n si" stroke-width="7" d="M134 178 L156 196"/>${T(114,160,10,'sauf si…','xa')}`),"Une loupe sur les petites lignes.");
+p('contrat',1,"Contrat à durée indéterminée",row(w('CONTRAT',f(12)),a('∞',f(20))),"CONTRAT à l'infini : CDI.");
+p('contrat',2,"Cas de force majeure",S(`${T(100,108,52,'FORCE')}<circle class="xa si" cx="164" cy="44" r="22"/>${T(164,44.5,15,'18+','xt')}`),"FORCE majeure (adulte).");
+p('contrat',3,"Bonne foi",S(`<path class="xv si" d="M26 96 Q24 56 76 52 Q150 44 174 70 Q184 92 152 106 Q112 128 70 140 Q30 146 26 96Z"/><circle class="xt" cx="74" cy="82" r="5"/><circle class="xt" cx="104" cy="78" r="5"/><path class="n st" stroke-width="3.4" d="M70 102 Q90 118 112 98"/><path class="n sg" stroke-width="6" d="M138 150 L152 166 L180 132"/>`),"Un foie content : bonne foi.");
+p('contrat',3,"Mauvaise foi",S(`<path class="xv si" d="M26 96 Q24 56 76 52 Q150 44 174 70 Q184 92 152 106 Q112 128 70 140 Q30 146 26 96Z"/><path class="n st" stroke-width="3" d="M66 74 L80 82 M112 70 L98 80"/><circle class="xt" cx="76" cy="88" r="4"/><circle class="xt" cx="102" cy="86" r="4"/><path class="n st" stroke-width="3.4" d="M70 116 Q90 100 112 112"/><path class="n sr" stroke-width="6" d="M140 136 L176 172 M176 136 L140 172"/>`),"Un foie de travers : mauvaise foi.");
+p('contrat',2,"Vice caché",S(`<path class="n si" stroke-width="4" d="M10 22 H190"/>${screw(118,66,0,1.3)}<path class="xa si" d="M14 22 H118 Q110 70 120 110 Q106 150 116 194 H14Z"/><path class="n st" stroke-width="1.6" opacity=".6" d="M40 26 Q36 110 44 190 M70 26 Q64 110 74 190 M96 26 Q90 110 98 190"/>`),"Une vis (vice) cachée derrière un rideau.");
+p('contrat',2,"Vice de forme",S(`<path class="xs si" stroke-width="2.4" d="M100 28 L172 156 H28Z"/>${T(100,124,18,'FORME')}${screw(132,44,30,1.1)}`),"Une vis (vice) plantée dans une FORME.");
+p('contrat',2,"Caution solidaire",S(bagP(56,96,1)+bagP(144,96,1)+`<path class="n sd" stroke-width="5" d="M66 80 Q100 60 134 80"/><path class="n si" stroke-width="1.4" d="M66 80 Q100 60 134 80"/><circle class="xd si" cx="100" cy="68" r="6"/>`),"Deux cautions attachées l'une à l'autre.");
+p('contrat',1,"Dommages et intérêts",row(w('DOMMAGES',f(11)),m('&',f(11)),a('%',f(18))),"DOMMAGES & % (intérêts).");
+p('contrat',2,"Mise en demeure",S(`<rect class="xs" x="-2" y="180" width="204" height="24"/><rect class="xi" x="128" y="44" width="16" height="34"/><path class="xs si" d="M40 182 V90 H160 V182Z"/><path class="xa si" d="M28 94 L100 38 L172 94Z"/>
+ <rect class="xd si" x="120" y="128" width="28" height="54"/><circle class="xi" cx="142" cy="156" r="2.4"/><rect class="xt si" x="52" y="108" width="58" height="34"/>${T(81,125.5,16,'MISE','xa')}<path class="n si" stroke-width="1.2" d="M81 108 V142"/>`),"MISE dans une maison (une demeure).");
+p('contrat',1,"Au pied de la lettre",S(`<rect class="xt si" x="36" y="36" width="128" height="86" rx="3"/><path class="n si" d="M36 40 L100 86 L164 40"/><path class="n si" stroke-width="1.2" d="M36 118 L84 80 M164 118 L116 80"/>
+ <path class="n si" stroke-width="5" d="M78 122 L74 168 M122 122 L128 166"/><path class="xi" d="M60 166 Q60 158 74 160 H82 V172 H62Z"/><path class="xi" d="M120 162 H136 Q148 162 148 172 H120Z"/>`),"Les pieds de la lettre.");
+p('contrat',1,"L'esprit de la loi",ghost('LOI',30),"LOI en fantôme : son esprit.");
+p('contrat',2,"La lettre de la loi",S(`<rect class="xt si" x="22" y="46" width="156" height="108" rx="3"/><path class="n si" stroke-width="1.2" d="M22 50 L100 104 L178 50"/><rect class="xs sa" stroke-width="1.4" stroke-dasharray="2 2" x="146" y="56" width="22" height="26"/>${T(157,69,9,'RF','xa')}${T(84,130,30,'LOI','xa')}`),"LOI sur une lettre.");
+p('contrat',1,"Vide juridique",tight(w('JURI',f(12)),`<span style="display:block;width:16cqw;height:13cqw;border:.8cqw dashed var(--acc);border-radius:1cqw;margin-inline:1cqw"></span>`,w('QUE',f(12))),"JURIDIQUE avec un trou au milieu.");
+p('contrat',1,"Flou juridique",w('JURIDIQUE',f(14)+'filter:blur(.6cqw)'),"JURIDIQUE flou.");
+p('contrat',1,"Acte authentique",S(`${sheetDoc('ACTE',28)}<path class="xv" d="M110 150 L100 196 L114 186 L122 198 L126 152Z"/><path class="xv" d="M130 150 L136 194 L144 182 L156 190 L144 148Z"/><circle class="xv si" cx="128" cy="146" r="20"/>${T(128,146.5,15,'★','xt')}`),"ACTE scellé : authentique.");
+p('contrat',3,"Acte sous seing privé",S(`<path class="n sa" stroke-width="3.4" d="M26 80 C42 40 56 104 74 60 S104 36 100 72 S132 96 142 54 S166 58 178 70"/>${T(100,140,38,'PRIVÉ')}`),"PRIVÉ sous un seing (une signature).");
+p('contrat',3,"Contrat léonin",S(`<polygon class="xd si" points="${Array.from({length:28},(_,k)=>{const a=k*Math.PI/14,r=k%2?62:80;return `${r1(100+r*Math.cos(a))},${r1(104+r*Math.sin(a))}`;}).join(' ')}"/>
+ <circle class="xs si" cx="68" cy="58" r="10"/><circle class="xs si" cx="132" cy="58" r="10"/><circle class="xs si" cx="100" cy="104" r="54"/><circle class="xi" cx="80" cy="84" r="5"/><circle class="xi" cx="120" cy="84" r="5"/>${T(100,110,16,'CONTRAT')}<path class="xi" d="M92 126 H108 L100 136Z"/><path class="n si" stroke-width="1.6" d="M100 136 V142 M88 146 Q100 154 112 146"/>`),"CONTRAT à tête de lion : léonin.");
+p('contrat',2,"Clause de style",col(w('Clause',f(22)+'font-family:Georgia,"Times New Roman",serif;font-style:italic;font-weight:400;letter-spacing:.01em'),`<svg class="inl" viewBox="0 0 100 14" style="width:52cqw;height:8cqw" aria-hidden="true"><path class="k ka" d="M4 10 C30 2 50 14 70 6 S92 2 96 8"/></svg>`),"CLAUSE écrite avec style.");
+p('contrat',3,"Tacite reconduction",S(`${T(100,100,30,'CONTRAT')}<path class="n sa" stroke-width="3" d="${arcP(100,100,72,200,520)}"/><path class="xa" d="M28 68 L32 86 L44 74Z"/>
+ <path class="xi" d="M150 18 H158 L168 10 V36 L158 28 H150Z"/><path class="n sr" stroke-width="2.6" d="M174 16 L186 30 M186 16 L174 30"/>`),"CONTRAT qui se renouvelle en silence.");
+
+/* ---------- EXPRESSIONS & ADAGES ---------- */
+p('expr',3,"Dura lex, sed lex",S(`<path class="xl si" stroke-width="2.4" d="M40 182 V70 A60 60 0 0 1 160 70 V182Z"/><path class="n si" stroke-width="1.2" d="M146 40 L136 56 L146 66 M52 150 L64 160 L58 172"/>
+ ${T(102,112,48,'LEX','xt')}${T(100,110,48,'LEX')}<g transform="translate(160 160) rotate(30)"><rect class="xh si" x="-4" y="-34" width="8" height="40"/><rect class="xd si" x="-6" y="6" width="12" height="26" rx="2"/></g>`),"LEX gravé dans la pierre : la loi est dure.");
+p('expr',1,"Le glaive et la balance",S(`<g transform="translate(-34 6)">${balance(0,(x,y)=>'',(x,y)=>'')}</g><path class="xh si" d="M160 30 L168 40 V160 H152 V40Z"/><rect class="xa si" x="140" y="160" width="40" height="8" rx="2"/><rect class="xd si" x="155" y="168" width="10" height="20"/><circle class="xa si" cx="160" cy="192" r="5"/>`),"Les deux symboles de la justice.");
+p('expr',2,"Tomber sous le coup de la loi",S(`<g transform="translate(110 40) rotate(-24)"><rect class="xa si" x="-40" y="-18" width="80" height="36" rx="5"/>${T(0,1,20,'LOI','xt')}<rect class="xd si" x="-5" y="18" width="10" height="60"/></g>
+ <path class="n sa" stroke-width="2.4" d="M54 74 L42 66 M60 62 L54 50"/>${[...'TOMBER'].map((c,i)=>T(40+i*24,120+i*10,20,c,'xi','transform="rotate('+(i*14-20)+' '+(40+i*24)+' '+(120+i*10)+')"')).join('')}`),"TOMBER sous le coup (de marteau) de la LOI.");
+p('expr',1,"La justice est aveugle",S(`${T(100,108,32,'JUSTICE')}<rect class="xi" x="20" y="88" width="160" height="14" rx="2"/><path class="xi" d="M178 92 Q192 96 196 118 L188 116 Q186 102 176 100Z"/><path class="xi" d="M176 96 Q196 92 200 76 L192 74 Q188 88 176 92Z"/>`),"JUSTICE avec un bandeau sur les yeux.");
+p('expr',1,"Deux poids, deux mesures",S(balance(14,(x,y)=>kg(x,y),(x,y)=>kg(x,y))),"Deux poids identiques, une balance qui penche.");
+p('expr',2,"Arsenal juridique",S(`<path class="xs si" d="M150 182 Q140 170 150 160 Q160 170 150 182Z"/>${[[146,178],[160,178],[153,166]].map(([x,y])=>`<circle class="xi" cx="${x}" cy="${y}" r="7"/>`).join('')}
+ <g transform="translate(86 112) rotate(-22)"><rect class="xi" x="-66" y="-16" width="132" height="32" rx="8"/><rect class="xi" x="60" y="-20" width="12" height="40" rx="3"/>${T(-2,1,13,'JURIDIQUE','xt')}</g>
+ <circle class="xd si" cx="80" cy="152" r="26"/><circle class="xi" cx="80" cy="152" r="5"/>${[0,1,2,3,4,5].map(k=>{const a=k*Math.PI/3;return `<line class="sdi" stroke-width="2" x1="80" y1="152" x2="${r1(80+24*Math.cos(a))}" y2="${r1(152+24*Math.sin(a))}"/>`;}).join('')}`),"JURIDIQUE sur un canon.");
+p('expr',1,"Avoir gain de cause",S(`<path class="xa si" d="M56 26 H144 V60 Q144 106 100 112 Q56 106 56 60Z"/><path class="n si" stroke-width="6" d="M56 40 Q26 40 30 64 Q34 84 60 88 M144 40 Q174 40 170 64 Q166 84 140 88"/>
+ <rect class="xh si" x="92" y="112" width="16" height="30"/><rect class="xi" x="66" y="142" width="68" height="14" rx="2"/><rect class="xd si" x="56" y="156" width="88" height="22" rx="2"/>${T(100,66,18,'CAUSE','xt')}`),"CAUSE gravée sur un trophée.");
+p('expr',1,"Mis hors de cause",S(`<path class="xs si" d="M66 88 H164 L172 58 H74Z"/><path class="xi" d="M40 104 L66 88 H164 L138 104Z"/><rect class="xs si" x="40" y="104" width="98" height="72"/><path class="xh si" d="M138 104 L164 88 V160 L138 176Z"/><path class="n sa" stroke-width="2" stroke-dasharray="4 4" d="M92 92 Q84 64 74 50"/>
+ <text class="T xa" font-size="28" transform="translate(66 34) rotate(-10)">CAUSE</text>`),"CAUSE sortie de la boîte.");
+p('expr',1,"Le droit chemin",road('DROIT'),"DROIT peint sur un chemin bien droit.");
+p('expr',2,"L'exception qui confirme la règle",S(`<rect class="xd si" x="10" y="90" width="180" height="44" rx="3"/>${Array.from({length:18},(_,k)=>{const x=18+k*10;if(k==11)return `<path class="n sr" stroke-width="3" d="M${x} 90 V44"/><circle class="xr" cx="${x}" cy="40" r="5"/>`;return `<path class="n sdi" stroke-width="1.4" d="M${x} 90 V${k%5?100:108}"/>`;}).join('')}${[0,5,10,15].map(k=>T(18+k*10,118,9,k,'xdi')).join('')}`),"Une règle avec une graduation d'exception.");
+p('expr',2,"Faute de preuves",S(`${T(100,104,34,'PREUFES')}<ellipse class="n sr" stroke-width="2.4" cx="137" cy="104" rx="14" ry="20"/><path class="n sr" stroke-width="2.4" d="M30 130 Q38 124 46 130 T62 130 T78 130 T94 130 T110 130 T126 130 T142 130 T158 130 T174 130"/>${T(150,62,20,'V','xr')}<path class="n sr" stroke-width="2" d="M146 74 L138 86"/>`),"Une faute dans PREUVES.");
+p('expr',1,"Lettre morte",tombS('LETTRE',26,'Art. 0'),"LETTRE sur une pierre tombale.");
+p('expr',3,"In dubio pro reo",col(w('?',f(30)+'color:var(--acc)'),w('ACCUSÉ',f(13)),`<span class="pill">+1</span>`),"Le doute profite à l'ACCUSÉ.");
+
+/* ---------- LA LOI & LES TEXTES (expr) ---------- */
+p('loi',1,"Article premier",S(`<path class="xa" d="M136 22 L152 70 L164 64 L150 22Z"/><path class="xv" d="M176 22 L160 70 L148 64 L162 22Z"/><circle class="xa si" cx="156" cy="80" r="22"/>${T(156,81,15,'1ᵉʳ','xt')}${T(78,130,30,'ARTICLE')}`),"ARTICLE avec la médaille du premier.");
+p('loi',1,"Loi-cadre",S(`<path class="n si" stroke-width="1.4" d="M60 40 L100 16 L140 40"/><circle class="xi" cx="100" cy="15" r="3"/><rect class="xa si" x="20" y="38" width="160" height="134" rx="2"/><rect class="xs si" stroke-width="1" x="30" y="48" width="140" height="114"/><rect class="xt si" stroke-width="1" x="38" y="56" width="124" height="98"/>${T(100,105,40,'LOI')}`),"LOI dans un cadre.");
+p('loi',2,"Projet de loi",S(`<rect class="xa" x="10" y="20" width="180" height="160" rx="3"/>${[40,60,80,100,120,140,160].map(v=>`<path class="n st" stroke-width=".8" opacity=".3" d="M10 ${v} H190 M${v+10} 20 V180"/>`).join('')}
+ <text class="T" style="fill:none;stroke:var(--tile);stroke-width:2" font-size="60" x="100" y="102">LOI</text><path class="n st" stroke-width="1.2" d="M40 146 H160 M40 140 V152 M160 140 V152"/>${T(100,160,9,'1 : 50','xt')}<path class="n st" stroke-width="1.2" d="M26 64 V140"/>`),"LOI tracée sur un plan : un projet.");
+p('loi',1,"Abroger une loi",S(`${T(100,100,64,'LOI')}<path class="n sr" stroke-width="10" d="M34 40 L166 160 M166 40 L34 160"/>`),"LOI barrée.");
+p('loi',2,"Effet rétroactif",S(`<circle class="xt si" stroke-width="3" cx="100" cy="76" r="50"/>${Array.from({length:12},(_,k)=>{const a=k*Math.PI/6;return `<line class="si" stroke-width="${k%3?1.4:3}" x1="${r1(100+40*Math.cos(a))}" y1="${r1(76+40*Math.sin(a))}" x2="${r1(100+46*Math.cos(a))}" y2="${r1(76+46*Math.sin(a))}"/>`;}).join('')}<path class="n si" stroke-width="4" d="M100 76 V44 M100 76 L122 88"/><path class="n sa" stroke-width="3.6" d="${arcP(100,76,60,250,330)}"/><path class="xa" d="M60 26 L66 16 L72 30Z" transform="rotate(-8 66 22)"/>${T(100,160,34,'EFFET')}`),"EFFET avec une horloge qui recule.");
+p('loi',3,"Double degré de juridiction",row(w('JURIDICTION',f(9.5)),a('°°',f(16)+'align-self:flex-start')),"JURIDICTION au double degré.");
+p('loi',1,"Hiérarchie des normes",S(`<path class="xs si" d="M100 18 L148 82 H52Z"/><path class="xa si" d="M52 82 H148 L170 112 H30Z"/><path class="xs si" d="M30 112 H170 L186 142 H14Z"/><path class="xa si" d="M14 142 H186 L196 176 H4Z"/>
+ ${T(100,62,10,'★','xa')}${T(100,98,10,'CONSTITUTION','xt')}${T(100,128,13,'LOIS')}${T(100,160,13,'RÈGLEMENTS','xt')}`),"La pyramide des normes.");
+p('loi',1,"Séparation des pouvoirs",row(w('POU',f(13)),`<i style="display:block;width:1.4cqw;height:18cqw;background:var(--acc)"></i>`,w('VOI',f(13)),`<i style="display:block;width:1.4cqw;height:18cqw;background:var(--acc)"></i>`,w('RS',f(13))),"POUVOIRS séparés en trois.");
+p('loi',2,"Action de groupe",`<div style="display:grid;grid-template-columns:repeat(3,auto);gap:2cqw 4cqw">${Array.from({length:12},(_,i)=>w('ACTION',f(5.6),i==4?'a':'')).join('')}</div>`,"Un groupe d'ACTIONS.");
+p('loi',1,"Arbitrage",S(`<rect class="xr si" x="118" y="30" width="54" height="76" rx="4" transform="rotate(12 145 68)"/><path class="xh si" d="M30 120 H96 Q122 120 122 144 Q122 170 96 170 Q70 170 70 150 H30Z"/><circle class="xi" cx="96" cy="144" r="8"/><path class="n si" stroke-width="2.4" d="M30 120 V150"/><path class="n sa" stroke-width="2.4" d="M40 104 L32 92 M56 100 V86 M72 104 L80 92"/><path class="n si" stroke-width="1.6" d="M30 136 Q10 150 20 176"/>`),"Un sifflet et un carton : l'arbitre.");
+p('loi',1,"Une cause perdue",S((()=>{let s='';[172,128,84].forEach((sz,i)=>{const x0=100-sz/2,y0=100-sz/2,x1=x0+sz,y1=y0+sz,g=10;const segs={0:[[x0,y0,100-g,y0],[100+g,y0,x1,y0],[x1,y0,x1,y1],[x1,y1,x0,y1],[x0,y1,x0,y0]],1:[[x0,y0,x1,y0],[x1,y0,x1,100-g],[x1,100+g,x1,y1],[x1,y1,x0,y1],[x0,y1,x0,y0]],2:[[x0,y0,x1,y0],[x1,y0,x1,y1],[x1,y1,100+g,y1],[100-g,y1,x0,y1],[x0,y1,x0,y0]]}[i];segs.forEach(([a,b,c,d])=>{s+=`<line class="si" stroke-width="5" x1="${a}" y1="${b}" x2="${c}" y2="${d}"/>`;});});
+ s+=`<line class="si" stroke-width="5" x1="14" y1="100" x2="58" y2="100"/><line class="si" stroke-width="5" x1="142" y1="60" x2="186" y2="60"/><line class="si" stroke-width="5" x1="100" y1="142" x2="100" y2="186"/>`+T(100,101,15,'CAUSE','xa')+`<path class="n sa" stroke-width="1.6" stroke-dasharray="3 3" d="M100 4 V20 Q120 30 130 38"/>`;return s;})()),"CAUSE perdue dans un labyrinthe.");
+
+/* ---------- App ---------- */
+const TH={all:'Tous',proc:'Procédure',penal:'Pénal',jur:'Juridictions & métiers',contrat:'Contrats & obligations',loi:'La loi & les textes',expr:'Expressions & adages'};
+const code=i=>'R-'+String(i+1).padStart(3,'0');
+const dots=lv=>'●'.repeat(lv)+'○'.repeat(3-lv);
+let order=R.map((_,i)=>i), fTh='all', fLv=0, revealAll=false;
+const opened=new Set();
+const $=id=>document.getElementById(id);
+
+document.getElementById('lede').textContent=`${R.length} expressions du droit cachées dans des jeux de lettres et de dessins. Lancez une partie, ou parcourez la bibliothèque pour voir chaque réponse.`;
+
+function visible(){return order.filter(i=>(fTh==='all'||R[i].th===fTh)&&(!fLv||R[i].lv===fLv));}
+function renderThemes(){
+  $('themes').innerHTML=Object.keys(TH).map(k=>{
+    const n=R.filter(x=>(k==='all'||x.th===k)&&(!fLv||x.lv===fLv)).length;
+    return `<button class="chip" data-th="${k}" aria-pressed="${k===fTh}">${TH[k]}<small>${n}</small></button>`}).join('');
+}
+function ansHTML(i,show){const x=R[i];return show?`${x.ans}${x.note?`<small>${x.note}</small>`:''}`:'Touchez pour révéler';}
+function renderGrid(){
+  const v=visible();
+  $('count').textContent=`${v.length} rébus affiché${v.length>1?'s':''}`;
+  $('grid').innerHTML=v.length?v.map(i=>{const x=R[i],show=revealAll||opened.has(i);
+    return `<article class="card"><button class="tilebtn" data-i="${i}" aria-expanded="${show}" aria-label="Rébus ${code(i)} : ${show?'masquer':'révéler'} la réponse"><div class="t">${x.r}</div></button>
+    <div class="meta"><span>${code(i)}</span><span>${TH[x.th]}</span><span class="lv" title="Niveau ${x.lv}">${dots(x.lv)}</span></div>
+    <p class="ans ${show?'':'hid'}">${ansHTML(i,show)}</p></article>`}).join(''):`<p>Aucun rébus pour ce filtre.</p>`;
+}
+function render(){renderThemes();renderGrid();}
+
+$('themes').addEventListener('click',e=>{const b=e.target.closest('[data-th]');if(!b)return;fTh=b.dataset.th;render();});
+$('levels').addEventListener('click',e=>{const b=e.target.closest('[data-lv]');if(!b)return;fLv=+b.dataset.lv;
+  [...$('levels').children].forEach(x=>x.setAttribute('aria-pressed',x===b));render();});
+$('grid').addEventListener('click',e=>{const b=e.target.closest('.tilebtn');if(!b)return;const i=+b.dataset.i;
+  opened.has(i)?opened.delete(i):opened.add(i);
+  const show=revealAll||opened.has(i);const card=b.closest('.card');const an=card.querySelector('.ans');
+  an.className='ans '+(show?'':'hid');an.innerHTML=ansHTML(i,show);
+  b.setAttribute('aria-expanded',show);b.setAttribute('aria-label',`Rébus ${code(i)} : ${show?'masquer':'révéler'} la réponse`);});
+$('shuffle').addEventListener('click',()=>{for(let i=order.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[order[i],order[j]]=[order[j],order[i]];}renderGrid();});
+$('revealAll').addEventListener('click',e=>{revealAll=!revealAll;if(!revealAll)opened.clear();e.currentTarget.setAttribute('aria-pressed',revealAll);e.currentTarget.textContent=revealAll?'Masquer tout':'Révéler tout';renderGrid();});
+
+/* ---------- Quiz ---------- */
+const DUR=30000;
+let Q=[],qi=0,res=[],revealed=false,timerOn=true,t0=0,tick=null,ended=false;
+function qStart(list){
+  Q=Array.isArray(list)?list:visible();if(!Q.length)return;qi=0;res=new Array(Q.length).fill(null);ended=false;
+  $('quiz').hidden=false;document.documentElement.style.overflow='hidden';qShow();
+}
+function qClose(){stopT();$('quiz').hidden=true;document.documentElement.style.overflow='';
+  if(document.fullscreenElement){document.exitFullscreen().catch(()=>{});} }
+function scores(){$('qok').textContent='✓ '+res.filter(x=>x===true).length;$('qko').textContent='✗ '+res.filter(x=>x===false).length;}
+function stopT(){clearInterval(tick);tick=null;}
+function startT(){stopT();const bar=$('qbar');if(!timerOn||revealed){bar.style.transform='scaleX(1)';return;}
+  t0=Date.now();bar.style.transform='scaleX(1)';
+  tick=setInterval(()=>{const r=Math.max(0,1-(Date.now()-t0)/DUR);bar.style.transform=`scaleX(${r})`;if(r<=0){stopT();qReveal();}},100);}
+function qShow(){
+  ended=false;const i=Q[qi],x=R[i];revealed=res[qi]!==null;
+  $('qpos').textContent=`Rébus ${qi+1} / ${Q.length} · ${code(i)} · ${dots(x.lv)}`;scores();
+  $('qtimer').classList.toggle('off',!timerOn);
+  $('stage').innerHTML=`<div class="qtile"><div class="t">${x.r}</div></div>
+   <div class="qans ${revealed?'':'hid'}" id="qans">${revealed?`${x.ans}<small>${x.note}</small>`:`${TH[x.th]}`}</div>
+   <div class="qctl" id="qctl"></div><p class="kbd">Espace : révéler · ← → : naviguer · Échap : fermer</p>`;
+  qCtl();startT();
+}
+function qCtl(){
+  const done=res[qi]!==null;
+  $('qctl').innerHTML=`<button class="btn" data-q="prev" ${qi===0?'disabled':''}>← Précédent</button>`+
+    (!revealed?`<button class="btn primary" data-q="reveal">Révéler la réponse</button>`:
+     done?`<button class="btn primary" data-q="next">${qi===Q.length-1?'Voir le score':'Suivant →'}</button>`:
+     `<button class="btn ok" data-q="yes">Trouvé</button><button class="btn ko" data-q="no">Pas trouvé</button>`)+
+    (!revealed?`<button class="btn" data-q="next">Passer →</button>`:'');
+}
+function qReveal(){if(revealed)return;revealed=true;stopT();const x=R[Q[qi]];
+  const el=$('qans');el.className='qans';el.innerHTML=`${x.ans}<small>${x.note}</small>`;qCtl();}
+function qNext(){if(qi<Q.length-1){qi++;qShow();}else qEnd();}
+function qPrev(){if(qi>0){qi--;qShow();}}
+function qJudge(v){res[qi]=v;scores();qNext();}
+function qEnd(){
+  stopT();ended=true;const ok=res.filter(x=>x===true).length;
+  const miss=Q.filter((_,k)=>res[k]!==true);const recMsg=saveRec(ok,Q.length);
+  $('qpos').textContent='Fin de la partie';$('qbar').style.transform='scaleX(0)';
+  $('stage').innerHTML=`<div class="endc"><div class="big">${ok} / ${Q.length}</div>
+   <p>${ok===Q.length?'Sans faute. Le prétoire n\'a plus de secrets pour vous.':`${recMsg}${miss.length?' Ceux qui vous ont résisté :':''}`}</p>
+   ${miss.length?`<ul class="miss">${miss.map(i=>`<li>${R[i].ans}</li>`).join('')}</ul>`:''}
+   <div class="qctl"><button class="btn primary" data-q="restart">Rejouer en mélangeant</button><button class="btn" data-q="close">Retour à l\'accueil</button></div></div>`;
+}
+$('quiz').addEventListener('click',e=>{const b=e.target.closest('[data-q]');if(!b)return;
+  ({prev:qPrev,next:qNext,reveal:qReveal,yes:()=>qJudge(true),no:()=>qJudge(false),close:qClose,
+    restart:()=>{for(let i=Q.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[Q[i],Q[j]]=[Q[j],Q[i]];}qi=0;res=new Array(Q.length).fill(null);qShow();}})[b.dataset.q]();});
+$('startQuiz').addEventListener('click',qStart);
+/* ---------- Record ---------- */
+const RK='dingbats-pretoire-record';
+function getRec(){try{return JSON.parse(localStorage.getItem(RK))||null;}catch(_){return null;}}
+function showRec(){const r=getRec(),el=$('rec');if(!el)return;if(r){el.hidden=false;el.innerHTML=`Votre record : <b>${r.ok} / ${r.n}</b> · ${r.pct} %`;}else el.hidden=true;}
+function saveRec(ok,n){const pct=Math.round(ok*100/n),r=getRec();let msg='';
+  if(n>=5&&(!r||pct>r.pct||(pct===r.pct&&n>r.n))){try{localStorage.setItem(RK,JSON.stringify({ok,n,pct}));}catch(_){}msg=r?'Nouveau record !':'Premier record enregistré.';}
+  else msg=r?`Record à battre : ${r.pct} %.`:'Jouez au moins 5 rébus pour enregistrer un record.';
+  showRec();return msg;}
+/* ---------- Home ---------- */
+const smooth=()=>matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth';
+let hLv=0,hN=10;
+const shuf=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+const poolLv=()=>R.map((_,i)=>i).filter(i=>!hLv||R[i].lv===hLv);
+function heroSub(){const n=poolLv().length,k=hN?Math.min(hN,n):n;$('heroSub').textContent=`${k} rébus · chrono 30 s`;}
+function segPick(id,cb){$(id).addEventListener('click',e=>{const b=e.target.closest('[data-v]');if(!b)return;[...$(id).children].forEach(x=>x.setAttribute('aria-pressed',x===b));cb(+b.dataset.v);heroSub();});}
+segPick('hLv',v=>hLv=v);segPick('hN',v=>hN=v);heroSub();
+$('heroQuiz').addEventListener('click',()=>{let l=shuf(poolLv());if(hN)l=l.slice(0,hN);qStart(l);});
+function libBtn(){const lib=$('lib'),b=$('openLib');b.setAttribute('aria-expanded',!lib.hidden);
+  b.innerHTML=lib.hidden?`Parcourir les ${R.length} rébus <span aria-hidden="true">↓</span>`:'Masquer la bibliothèque <span aria-hidden="true">↑</span>';}
+function openLib(th){const lib=$('lib');if(th){fTh=th;render();}lib.hidden=false;libBtn();lib.scrollIntoView({behavior:smooth()});}
+$('openLib').addEventListener('click',()=>{const lib=$('lib');if(lib.hidden)openLib();else{lib.hidden=true;libBtn();}});
+libBtn();showRec();
+/* themes */
+$('tlist').innerHTML=Object.keys(TH).filter(k=>k!=='all').map(k=>{const ids=R.map((_,i)=>i).filter(i=>R[i].th===k);
+  const pick=ids.filter(i=>R[i].r.includes('class="scene"')).slice(0,3);while(pick.length<3&&ids.length>pick.length)pick.push(ids.find(i=>!pick.includes(i)));
+  return `<button class="tcard" data-th="${k}"><span class="thumbs" aria-hidden="true">${pick.map(i=>`<div class="t">${R[i].r}</div>`).join('')}</span><span class="tname"><b>${TH[k]}</b><small>${ids.length} rébus</small></span><span class="go" aria-hidden="true">→</span></button>`;}).join('');
+$('tlist').addEventListener('click',e=>{const b=e.target.closest('[data-th]');if(b)openLib(b.dataset.th);});
+$('qclose').addEventListener('click',qClose);
+$('qtimerBtn').addEventListener('click',e=>{timerOn=!timerOn;e.currentTarget.setAttribute('aria-pressed',timerOn);
+  e.currentTarget.textContent=timerOn?'Chrono 30 s':'Chrono coupé';$('qtimer').classList.toggle('off',!timerOn);if(!ended)startT();});
+$('qfs').addEventListener('click',()=>{const el=$('quiz');
+  try{const pr=document.fullscreenElement?document.exitFullscreen():el.requestFullscreen?.();pr&&pr.catch&&pr.catch(()=>{});}catch(_){}});
+document.addEventListener('keydown',e=>{if($('quiz').hidden)return;
+  if(e.key==='Escape'){qClose();return;}
+  if(ended)return;
+  if(e.target.closest&&e.target.closest('button')&&(e.key===' '||e.key==='Enter'))return;
+  if(e.key===' '||e.key==='Enter'){e.preventDefault();revealed?(res[qi]!==null?qNext():null):qReveal();}
+  else if(e.key==='ArrowRight'){qNext();}
+  else if(e.key==='ArrowLeft'){qPrev();}});
+
+render();
+</script>
+
+</body>
+</html>
